@@ -16,13 +16,30 @@ breath_timer = breath_timer_initial;
 image_speed = 0;
 
 
+//jump
+//will he jump this chance?
+jump_chance = .5;
+//how often to check for a jump change?
+jump_timer_initial = random_range(room_speed, room_speed * 1.5);
+jump_timer = jump_timer_initial;
+
+
 //states
 enum frog_states {
-	idle	
+	idle,
+	jump_start,
+	jump,
+	jump_land
 }
 
 state = frog_states.idle;
 
 states_array[frog_states.idle] = frog_idle_state;
+states_array[frog_states.jump_start] = frog_jump_start_state;
+states_array[frog_states.jump] = frog_jump_state;
+states_array[frog_states.jump_land] = frog_jump_land_state;
 
 sprites_array[frog_states.idle] = s_frog_idle;
+sprites_array[frog_states.jump_start] = s_frog_jump_start;
+sprites_array[frog_states.jump] = s_frog_jump;
+sprites_array[frog_states.jump_land] = s_frog_jump_land;

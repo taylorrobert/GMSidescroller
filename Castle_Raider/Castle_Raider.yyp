@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "2a8e618b-1b4c-4388-8065-3ea0970a9a06",
+            "Value": {
+                "id": "d3a384e2-6d9b-47cc-ac8c-7628f1188615",
+                "resourcePath": "sprites\\s_frog_jump_land\\s_frog_jump_land.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3741c901-2019-4bb6-80a4-70a0057f82cd",
             "Value": {
                 "id": "67711c80-329d-452c-9398-3774d8babd87",
@@ -156,6 +164,14 @@
                 "id": "54afca34-9ed3-4547-87e1-cb3ba8b301d0",
                 "resourcePath": "views\\4b6c589f-1b1d-4f36-bad0-d2335dbca75a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4bab448d-e8a3-4a72-8a02-212e609c408d",
+            "Value": {
+                "id": "ca2b2836-64f0-49a3-9b9a-c4fee3171ac0",
+                "resourcePath": "scripts\\frog_jump_start_state\\frog_jump_start_state.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -271,6 +287,14 @@
             }
         },
         {
+            "Key": "7787997b-c2f6-477e-ae25-c4348c8c0d9c",
+            "Value": {
+                "id": "d150d89a-6fa3-4c4c-ba6f-1c455a96f953",
+                "resourcePath": "scripts\\frog_jump_state\\frog_jump_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "791d791e-a28d-4dee-9216-6f4dd0c7fda7",
             "Value": {
                 "id": "9a4a2a11-3a05-49f7-b5da-1e69c2b3aaac",
@@ -287,6 +311,14 @@
             }
         },
         {
+            "Key": "7cecba31-ebc3-4bd8-9899-9fc3faa54eda",
+            "Value": {
+                "id": "4aa72bcc-d94b-4b44-8e2c-792241eeda51",
+                "resourcePath": "sprites\\s_frog_jump_start\\s_frog_jump_start.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7dc1b4c2-49ee-4e83-8104-3d328864946f",
             "Value": {
                 "id": "dc55f7bb-9fe0-40d3-a8d3-d0017a507003",
@@ -299,6 +331,14 @@
             "Value": {
                 "id": "64bdabac-eb13-45a3-b431-ba442bec8ff8",
                 "resourcePath": "sprites\\s_bkgd_moon\\s_bkgd_moon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8a70e46b-eac8-4cc8-a2dd-312459fbd6b5",
+            "Value": {
+                "id": "96004787-34bf-48a6-a797-00ef1eda6da3",
+                "resourcePath": "sprites\\s_frog_jump\\s_frog_jump.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -323,6 +363,14 @@
             "Value": {
                 "id": "9a22954b-918b-4f58-a01b-87f0e0c22d1f",
                 "resourcePath": "scripts\\calcMovement\\calcMovement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",
+            "Value": {
+                "id": "0ab96b64-7c7a-45ca-bc7c-6fda15909dd3",
+                "resourcePath": "scripts\\frog_jump_land_state\\frog_jump_land_state.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -610,6 +658,9 @@
         "730dc442-4ef6-479c-9c59-67ea6a9d333b",
         "762e548a-7a3e-488e-ad28-7355cef633fb",
         "3bb76155-1c22-45ea-8690-e670aeede964",
+        "4bab448d-e8a3-4a72-8a02-212e609c408d",
+        "7787997b-c2f6-477e-ae25-c4348c8c0d9c",
+        "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",
         "6479bb59-f4de-4ee8-be83-87d70c3597cf"
     ],
     "tutorial": ""

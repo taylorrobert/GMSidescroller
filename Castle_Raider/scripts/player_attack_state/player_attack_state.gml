@@ -21,6 +21,12 @@ if (jump) {
 	state = states.attack;
 }
 
+//create hitbox
+if (image_index >= 1 and image_index <=3) {
+	var inst = instance_create_layer(x, y, "Player", o_player_attack_hitbox);
+	inst.image_xscale = facing;
+}
+
 //enable smaller jumps
 if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 

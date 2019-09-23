@@ -18,3 +18,10 @@ draw_set_color(c_black);
 draw_text(xx + text_xx + 1, yy + text_yy + 1, o_player.gems);
 draw_set_color(color);
 draw_text(xx + text_xx, yy + text_yy, o_player.gems);
+
+//hp bar
+xx = 48;
+yy = 25;
+draw_sprite(s_hp_bar, 1, xx, yy);
+draw_sprite_ext(s_hp_bar, 2, xx, yy, o_player.hp/o_player.max_hp, 1, 0, c_white, image_alpha);
+draw_sprite(s_hp_bar, 0, xx, yy);

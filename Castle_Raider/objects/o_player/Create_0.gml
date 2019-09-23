@@ -28,6 +28,7 @@ hurt = false;
 hurt_time = room_speed;
 
 hp = 5;
+max_hp = hp;
 
 left = 0;
 right = 0;

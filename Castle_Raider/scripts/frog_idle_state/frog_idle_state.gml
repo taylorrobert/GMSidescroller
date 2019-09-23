@@ -1,5 +1,6 @@
 //frog_idle_state
-
+//check health
+checkEnemyHP();
 
 //get inputs
 breathing();

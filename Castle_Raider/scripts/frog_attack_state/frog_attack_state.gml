@@ -13,6 +13,9 @@ calcEntityMovement();
 //attack
 
 //attack warning
+//check health
+checkEnemyHP();
+
 if (image_index == 2 and !inhale) {
 	inhale = true;
 	alarm[INHALE] = inhale_timer;

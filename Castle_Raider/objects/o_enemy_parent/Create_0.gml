@@ -5,3 +5,5 @@ flash_counter = 0;
 
 //slowdown
 drag = 0.12;
+
+death_gem_value = 3;

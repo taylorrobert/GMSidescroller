@@ -19,6 +19,9 @@ drag = .12;
 //facing direction
 facing = 1;
 
+//gems
+gems = 0;
+
 //hurt
 flash_counter = 0;
 hurt = false;

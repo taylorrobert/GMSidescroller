@@ -1,5 +1,7 @@
 //frog_jump_land_state
 
+//check health
+checkEnemyHP();
 
 //get inputs
 

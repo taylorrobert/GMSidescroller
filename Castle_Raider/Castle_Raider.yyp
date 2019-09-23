@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "c71ac813-b275-48d0-a1a6-adaa9e112227",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
             "Key": "8a70e46b-eac8-4cc8-a2dd-312459fbd6b5",
             "Value": {
                 "id": "96004787-34bf-48a6-a797-00ef1eda6da3",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "93566aad-c3b3-48a9-8fa7-9c5ee19f74ac",
+            "Value": {
+                "id": "c0579565-57af-47d1-b558-e907c37dd890",
+                "resourcePath": "options\\tvos\\options_tvos.yy",
+                "resourceType": "GMtvOSOptions"
+            }
+        },
+        {
             "Key": "962b79fe-a252-4f0e-828f-b6db5dc18a6f",
             "Value": {
                 "id": "9a22954b-918b-4f58-a01b-87f0e0c22d1f",
@@ -380,6 +396,14 @@
                 "id": "0e775877-84a1-4a97-bac3-f3a9568db81f",
                 "resourcePath": "sprites\\s_player_idle\\s_player_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
+            "Value": {
+                "id": "e1cd2470-28c6-4c1b-b76f-d7e2cf9ca9d0",
+                "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
+                "resourceType": "GMAmazonFireOptions"
             }
         },
         {
@@ -543,11 +567,27 @@
             }
         },
         {
+            "Key": "d4239f25-af6d-4861-a3f8-aa9718918b8e",
+            "Value": {
+                "id": "c14e7e88-edee-4fb9-9724-f4c74be36b90",
+                "resourcePath": "scripts\\frog_attack_state\\frog_attack_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d6600c30-a2d9-48ff-bc77-eb61383a5e27",
             "Value": {
                 "id": "23a3f8a8-e2a8-4e36-bc76-f2feca6dd4f8",
                 "resourcePath": "views\\d6600c30-a2d9-48ff-bc77-eb61383a5e27.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "db5f49aa-ec49-4790-ae90-4f8eb4fb5945",
+            "Value": {
+                "id": "30b35cdc-c06f-41f0-803e-64d6277ff5b1",
+                "resourcePath": "sprites\\s_frog_attack\\s_frog_attack.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -572,6 +612,14 @@
                 "id": "28fb0662-9c00-4b57-8b0f-b72f3608447a",
                 "resourcePath": "scripts\\jumped\\jumped.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "50178a14-9147-452d-beca-0c15b1c471d6",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
             }
         },
         {
@@ -658,6 +706,7 @@
         "730dc442-4ef6-479c-9c59-67ea6a9d333b",
         "762e548a-7a3e-488e-ad28-7355cef633fb",
         "3bb76155-1c22-45ea-8690-e670aeede964",
+        "d4239f25-af6d-4861-a3f8-aa9718918b8e",
         "4bab448d-e8a3-4a72-8a02-212e609c408d",
         "7787997b-c2f6-477e-ae25-c4348c8c0d9c",
         "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",

@@ -6,7 +6,7 @@ breathing();
 
 
 //calculate movement
-
+calcEntityMovement();
 
 
 //modify state

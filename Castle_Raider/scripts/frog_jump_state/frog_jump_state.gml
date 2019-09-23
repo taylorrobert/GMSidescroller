@@ -5,8 +5,10 @@
 
 
 //calculate movement
+calcEntityMovement();
+
+//horizontal
 hsp += spd * facing;
-vsp += global.grav;
 
 //limit speed
 hsp = min(abs(hsp), max_hsp) * facing;

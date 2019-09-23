@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "113dc0b0-3e9f-4417-b6e6-24ab02db37c9",
+            "Value": {
+                "id": "dfb717d8-f427-4281-b3a7-6bae6233a90c",
+                "resourcePath": "objects\\o_sword_hit\\o_sword_hit.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "12d5db3c-132c-4617-8b74-39f5599ac3c1",
             "Value": {
                 "id": "10d4ce97-83e6-4244-98fc-3b7044e01e04",
@@ -95,6 +103,14 @@
             }
         },
         {
+            "Key": "23dbbb87-8b53-42f8-84a2-f813d121c0e2",
+            "Value": {
+                "id": "986fcf12-c708-4a52-bb64-951d3dfa4a0b",
+                "resourcePath": "sprites\\s_sword_hit\\s_sword_hit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2420640e-dd26-4de9-a9f0-baa08033d0f7",
             "Value": {
                 "id": "1e6c6bca-676c-4292-82d1-1c2c25b00b87",
@@ -108,6 +124,14 @@
                 "id": "d3a384e2-6d9b-47cc-ac8c-7628f1188615",
                 "resourcePath": "sprites\\s_frog_jump_land\\s_frog_jump_land.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3623557e-8381-4104-a2b2-1da163f3e607",
+            "Value": {
+                "id": "e69d9811-ebaf-4349-b63f-69bb8cfb90a9",
+                "resourcePath": "objects\\o_frog_attack_hitbox\\o_frog_attack_hitbox.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -203,6 +227,14 @@
             "Value": {
                 "id": "f0da6685-66c2-4a4a-81ac-232f9f6b2a0c",
                 "resourcePath": "sprites\\s_player_walk\\s_player_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "639dab56-ac6e-41d6-ace4-b1ca5aeeea96",
+            "Value": {
+                "id": "6335ea59-d632-4fcc-9431-94b3d2e44afb",
+                "resourcePath": "sprites\\s_frog_attack_hitbox\\s_frog_attack_hitbox.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -583,6 +615,14 @@
             }
         },
         {
+            "Key": "ce76b71c-10b6-40fb-b31f-bab3299e44b2",
+            "Value": {
+                "id": "37dff5fc-e8f2-488f-91ed-b914cd0e4e0e",
+                "resourcePath": "sprites\\s_sword_hit2\\s_sword_hit2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cf38115e-007b-4833-9ee0-297acacd2ffe",
             "Value": {
                 "id": "ab61350d-191f-4478-854d-a45ba6a08d83",
@@ -709,6 +749,14 @@
                 "resourcePath": "views\\fe1fcb5c-90ab-4601-8dd9-151b7bdb9bc1.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "fe72864b-1080-4dcc-bcc5-8196a89e9a11",
+            "Value": {
+                "id": "fc0b826c-7d3e-4d71-9edb-6888c9b8c643",
+                "resourcePath": "scripts\\calcEntityMovement\\calcEntityMovement.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -734,7 +782,8 @@
         "4bab448d-e8a3-4a72-8a02-212e609c408d",
         "7787997b-c2f6-477e-ae25-c4348c8c0d9c",
         "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",
-        "6479bb59-f4de-4ee8-be83-87d70c3597cf"
+        "6479bb59-f4de-4ee8-be83-87d70c3597cf",
+        "fe72864b-1080-4dcc-bcc5-8196a89e9a11"
     ],
     "tutorial": ""
 }

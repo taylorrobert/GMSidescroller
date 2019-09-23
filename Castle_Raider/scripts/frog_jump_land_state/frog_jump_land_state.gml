@@ -5,7 +5,7 @@
 
 
 //calculate movement
-
+calcEntityMovement();
 
 
 //modify state

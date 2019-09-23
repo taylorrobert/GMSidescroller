@@ -19,6 +19,13 @@ drag = .12;
 //facing direction
 facing = 1;
 
+//hurt
+flash_counter = 0;
+hurt = false;
+hurt_time = room_speed;
+
+hp = 5;
+
 left = 0;
 right = 0;
 up = 0;

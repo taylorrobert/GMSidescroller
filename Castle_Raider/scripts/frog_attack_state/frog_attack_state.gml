@@ -6,7 +6,7 @@
 
 
 //calculate movement
-
+calcEntityMovement();
 
 
 //modify state
@@ -20,6 +20,12 @@ if (image_index == 2 and !inhale) {
 }
 
 if (attack) {
+	if (image_index >= 5 and image_index <= 6) {
+		//create hitbox
+		var inst = instance_create_layer(x, y, "Enemy", o_frog_attack_hitbox);
+		//ensure hitbox faces the way the frog faces
+		inst.image_xscale = facing;
+	}
 	//set tongue depth
 	depth = layer_get_depth(layer_get_id("Player") - 1);
 

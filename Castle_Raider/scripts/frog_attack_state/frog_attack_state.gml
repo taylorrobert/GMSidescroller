@@ -29,7 +29,7 @@ if (attack) {
 	//set tongue depth
 	depth = layer_get_depth(layer_get_id("Player") - 1);
 
-	if (image_index >= image_number - image_speed) {
+	if (image_index >= image_number	- sprite_get_speed(sprite_index)/room_speed) {
 		state = frog_states.idle;
 		alarm[CAN_ATTACK] = attack_delay;
 		depth = layer_get_depth(layer_get_id("Enemy"));

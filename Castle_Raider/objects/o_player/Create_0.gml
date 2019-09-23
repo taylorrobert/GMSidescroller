@@ -46,7 +46,9 @@ enum states {
 	attack,
 	block,
 	crouch,
-	crouch_block
+	crouch_block,
+	hurting,
+	knockback
 }
 
 state = states.idle;
@@ -59,6 +61,8 @@ states_array[states.attack]			= player_attack_state;
 states_array[states.block]			= player_block_state;
 states_array[states.crouch]			= player_crouch_state;
 states_array[states.crouch_block]	= player_crouch_block_state;
+states_array[states.hurting]		= player_hurting_state;
+states_array[states.knockback]		= player_knockback_state;
 
 
 //sprites array
@@ -69,6 +73,8 @@ sprites_array[states.attack]		= s_player_attack;
 sprites_array[states.block]			= s_player_block;
 sprites_array[states.crouch]		= s_player_crouch;
 sprites_array[states.crouch_block]	= s_player_crouch_block;
+sprites_array[states.hurting]		= s_player_hurting;
+sprites_array[states.knockback]		= s_player_knockback;
 
 
 //mask array
@@ -79,7 +85,8 @@ mask_array[states.attack]		= s_player_idle;
 mask_array[states.block]		= s_player_idle;
 mask_array[states.crouch]		= s_player_crouch;
 mask_array[states.crouch_block]	= s_player_crouch;
-
+mask_array[states.hurting]		= s_player_idle;
+mask_array[states.knockback]	= s_player_idle;
 
 
 

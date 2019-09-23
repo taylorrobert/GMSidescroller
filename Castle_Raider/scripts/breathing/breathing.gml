@@ -9,7 +9,7 @@ else {
 }
 
 //stop breathing at the end of the animation
-if (image_index >= image_number - image_speed) {
+if (image_index >= image_number	- sprite_get_speed(sprite_index)/room_speed) {
 	breath_timer = breath_timer_initial;
 	//pause at the first frame
 	image_index = 0;

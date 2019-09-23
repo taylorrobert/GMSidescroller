@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "a535e099-820f-4a22-9d9b-17da65a11231",
+            "Value": {
+                "id": "53c46ffb-719a-4854-80ae-3b9f8a8eea56",
+                "resourcePath": "objects\\o_chest\\o_chest.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a7e824d0-f48b-4545-b2ce-c2075e44271a",
             "Value": {
                 "id": "48b17f34-5090-4d08-860d-d5d7f7c21748",
@@ -839,6 +847,14 @@
             }
         },
         {
+            "Key": "f80e0c01-a28f-4ac3-ba3a-4f7de66029c2",
+            "Value": {
+                "id": "3726d472-8d3e-4a43-b889-eddcb34c04c1",
+                "resourcePath": "sprites\\s_chest\\s_chest.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f8c22ccf-0e65-401d-b366-6feefdafc9ea",
             "Value": {
                 "id": "91826c69-82ac-4324-b8f1-a919f32d7c22",
@@ -883,7 +899,6 @@
         "f279de7f-a6b1-4a2d-a948-cb45f04f1e5a",
         "962b79fe-a252-4f0e-828f-b6db5dc18a6f",
         "b2ae9ac8-0abb-4023-9cea-989a9127fbf0",
-        "cd643d16-166a-41ce-8848-af59de29372c",
         "ca563b61-3c8f-441e-98ae-f774d428578e",
         "84324627-bd80-4930-aada-6cd36b418305",
         "3ce2f776-74e4-43b9-a716-07ed18e22f2f",
@@ -893,11 +908,12 @@
         "395f8673-d2f5-4dcc-a86f-15ffb8b12e39",
         "b58ae3cf-f638-400a-a3c1-26628a324ccc",
         "22dd36e1-be74-43c2-87e3-846b2c3187bb",
-        "a3ed0b1b-6882-4a7b-a525-8b979972a590",
-        "abde3ac1-b708-4f38-81c9-2f77dd8a334b",
         "e0ea7760-6cbb-4240-8e14-21b5af201c26",
         "a3464dea-0bea-4c17-be96-ccafe90e942a",
         "730dc442-4ef6-479c-9c59-67ea6a9d333b",
+        "cd643d16-166a-41ce-8848-af59de29372c",
+        "a3ed0b1b-6882-4a7b-a525-8b979972a590",
+        "abde3ac1-b708-4f38-81c9-2f77dd8a334b",
         "762e548a-7a3e-488e-ad28-7355cef633fb",
         "3bb76155-1c22-45ea-8690-e670aeede964",
         "d4239f25-af6d-4861-a3f8-aa9718918b8e",

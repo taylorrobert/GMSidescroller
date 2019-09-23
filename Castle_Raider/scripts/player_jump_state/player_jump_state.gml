@@ -8,6 +8,11 @@ calcMovement();
 
 //check state
 if (onGround()) {
+	
+	//apply stretch
+	scale_x = scale_max;
+	scale_y = scale_min;
+	
 	if (hsp != 0) state = states.walk;
 	else state = states.idle;
 	

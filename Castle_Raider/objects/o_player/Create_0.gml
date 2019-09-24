@@ -29,6 +29,14 @@ facing = 1;
 //gems
 gems = 0;
 
+//set rm_00 start location
+room_start_pos_x = 65;
+room_start_pos_y = 127;
+room_start_facing_direction = 1;
+x = room_start_pos_x;
+y = room_start_pos_y;
+facing = room_start_facing_direction;
+
 //hurt
 flash_counter = 0;
 hurt = false;
@@ -59,7 +67,8 @@ enum states {
 	crouch,
 	crouch_block,
 	hurting,
-	knockback
+	knockback,
+	die
 }
 
 state = states.idle;
@@ -74,6 +83,7 @@ states_array[states.crouch]			= player_crouch_state;
 states_array[states.crouch_block]	= player_crouch_block_state;
 states_array[states.hurting]		= player_hurting_state;
 states_array[states.knockback]		= player_knockback_state;
+states_array[states.die]			= player_die_state;
 
 
 //sprites array
@@ -86,6 +96,7 @@ sprites_array[states.crouch]		= s_player_crouch;
 sprites_array[states.crouch_block]	= s_player_crouch_block;
 sprites_array[states.hurting]		= s_player_hurting;
 sprites_array[states.knockback]		= s_player_knockback;
+sprites_array[states.die]			= s_player_die;
 
 
 //mask array
@@ -98,6 +109,7 @@ mask_array[states.crouch]		= s_player_crouch;
 mask_array[states.crouch_block]	= s_player_crouch;
 mask_array[states.hurting]		= s_player_idle;
 mask_array[states.knockback]	= s_player_idle;
+mask_array[states.die]	= s_player_die;
 
 
 

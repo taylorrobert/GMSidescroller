@@ -1,1 +1,1 @@
-if (die) instance_destroy();
+if (die) instance_destroy(); 

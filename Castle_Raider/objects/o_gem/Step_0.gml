@@ -60,3 +60,13 @@ if (die) {
 
 //collide with walls
 collision();
+
+//update the light's position
+with (light_id) {
+	x = other.x;
+	y = other.y;
+}
+
+
+
+

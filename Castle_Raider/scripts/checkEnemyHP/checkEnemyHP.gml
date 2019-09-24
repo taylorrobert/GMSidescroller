@@ -21,5 +21,6 @@ if (hp <= 0) {
 		}
 	}
 	
+	scr_screen_shake(.15, -1);
 	instance_destroy();
 }

@@ -35,6 +35,9 @@ if (alarm[HURT] < hurt_time * recover_time) {
 //apply movement
 collision();
 
+//check player hp
+checkPlayerHp();
+
 //apply animations
 anim();
 

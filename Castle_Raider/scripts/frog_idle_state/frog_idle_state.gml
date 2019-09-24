@@ -17,11 +17,15 @@ var detect_player_distance = 40;
 var player_alert = false;	//player in front and within range, but attack is not ready
 //player is within detected distance and we are facing player and we can attack
 if ((distance_to_object(o_player) < detect_player_distance) and (sign(o_player.x - x) == facing)) {
-	if (can_attack) {
-		can_attack = false;
-		state = frog_states.attack;
-		image_index = 0;
-		image_speed = 1;
+	
+	if (o_player.hp > 0) {	
+		if (can_attack) {
+			//attack
+			can_attack = false;
+			state = frog_states.attack;
+			image_index = 0;
+			image_speed = 1;
+		}
 	}
 	
 	player_alert = true;		

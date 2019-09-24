@@ -25,5 +25,8 @@ if (jump) {
 //apply movement
 collision();
 
+//check player hp
+checkPlayerHp();
+
 //apply animations
 anim();

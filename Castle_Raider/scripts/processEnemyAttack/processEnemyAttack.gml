@@ -10,7 +10,7 @@ if (hk == -1) hk = 4;
 if (bk == -1) bk = 2.5;
 
 
-if (!hurt) {
+if (o_player.hp > 0 and !hurt) {
 	if (!block or (block and sign(x - other.x) == facing)) {
 		hurt = true;	
 			
@@ -36,6 +36,9 @@ if (!hurt) {
 		//change state
 		state = states.hurting;
 		image_index = 0;
+		
+		//screen shake
+		scr_screen_shake(.125, -1);
 	}
 	else {
 		//blocking damage
@@ -50,6 +53,9 @@ if (!hurt) {
 			//move player away from the attack
 			var knockback_distance = bk;
 			hsp = sign(x - other.x) * knockback_distance;
+			
+			//screen shake
+			scr_screen_shake(.125, -1);
 		}
 	}
 }

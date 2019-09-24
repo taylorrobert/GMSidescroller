@@ -28,6 +28,9 @@ if (image_index  >= image_number - sprite_get_speed(sprite_index/room_speed) and
 //apply movement
 collision();
 
+//check player hp
+checkPlayerHp();
+
 //apply animations
 anim();
 

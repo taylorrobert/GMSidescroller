@@ -24,6 +24,12 @@ if (screen_shake) {
 
 camera_set_view_pos(camera, xx, yy);
 
+//camera
+global.cx = camera_get_view_x(camera);
+global.cy = camera_get_view_y(camera);
+global.cw = camera_get_view_width(camera);
+global.ch = camera_get_view_height(camera);
+
 //background scrolling
 var layer_id = layer_get_id("Background");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.7))

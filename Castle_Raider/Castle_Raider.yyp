@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "030fbf6f-961a-4596-b7c7-c2f13be8d222",
+            "Value": {
+                "id": "be432409-5b8f-436d-ad56-51aa53a7be77",
+                "resourcePath": "sprites\\s_arrow_spark\\s_arrow_spark.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "091bdb7a-5f86-4bf9-a238-5d164ade02cb",
             "Value": {
                 "id": "afc10d28-5367-432b-873f-97a12e161d43",
@@ -107,6 +115,14 @@
             "Value": {
                 "id": "0f166f90-231c-49b2-ac47-594b159d6dca",
                 "resourcePath": "scripts\\player_die_state\\player_die_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "14efb551-ecb6-4564-a567-dec20552147d",
+            "Value": {
+                "id": "cff2e2d5-a289-4f4c-8c02-c0ad648779a1",
+                "resourcePath": "scripts\\onScreen\\onScreen.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -319,6 +335,14 @@
             }
         },
         {
+            "Key": "5cae23fb-9c03-42a6-a229-12d0c0c4206a",
+            "Value": {
+                "id": "849c48e6-1a75-44b8-a163-8402b9863ed0",
+                "resourcePath": "sprites\\s_arrow_spawner\\s_arrow_spawner.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "616ac5e9-b01d-45ec-ba6e-d9b0805c3599",
             "Value": {
                 "id": "19045ce1-c7a2-4441-b942-01d752a2c12c",
@@ -443,6 +467,14 @@
             "Value": {
                 "id": "9a4a2a11-3a05-49f7-b5da-1e69c2b3aaac",
                 "resourcePath": "sprites\\s_player_jump\\s_player_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7a35ffa9-f176-4ccc-972f-8375858f3566",
+            "Value": {
+                "id": "3547af3a-6a8c-44d7-b9ac-4426915ce5ea",
+                "resourcePath": "sprites\\s_arrow\\s_arrow.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -751,6 +783,14 @@
             }
         },
         {
+            "Key": "caa5a545-c978-4a20-ac8d-2c908b2af670",
+            "Value": {
+                "id": "162e2863-6490-4949-81dc-9b7b3b2396ea",
+                "resourcePath": "objects\\o_arrow_spawner\\o_arrow_spawner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "caf3b5be-dc49-4000-a66e-3cb58710b94d",
             "Value": {
                 "id": "d1069db6-db31-406d-8de4-4134ba173824",
@@ -791,11 +831,27 @@
             }
         },
         {
+            "Key": "d2f0b0ac-b8a0-4500-aa5d-9b7318a7d95f",
+            "Value": {
+                "id": "8f963f1a-5ba3-4322-9a7c-9075e4a2c00c",
+                "resourcePath": "objects\\o_arrow\\o_arrow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d4239f25-af6d-4861-a3f8-aa9718918b8e",
             "Value": {
                 "id": "c14e7e88-edee-4fb9-9724-f4c74be36b90",
                 "resourcePath": "scripts\\frog_attack_state\\frog_attack_state.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d456c32a-0b80-43e5-84d6-91df6d47ebaa",
+            "Value": {
+                "id": "d19074fa-8ecb-4a4e-b95e-f6c2a8f630d9",
+                "resourcePath": "views\\d456c32a-0b80-43e5-84d6-91df6d47ebaa.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -867,6 +923,14 @@
             "Value": {
                 "id": "126959f7-7d09-4c1e-8079-80c29fb9fccd",
                 "resourcePath": "objects\\o_spark\\o_spark.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ec78a7e0-1c30-4690-91e8-703481d94f6e",
+            "Value": {
+                "id": "89ee8268-e48f-4570-887b-650f3c4246f7",
+                "resourcePath": "objects\\o_arrow_spark\\o_arrow_spark.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -974,7 +1038,8 @@
         "fe72864b-1080-4dcc-bcc5-8196a89e9a11",
         "b28ba9a5-2b6e-473f-8196-9b876721ab68",
         "3c253538-daea-4bac-9f52-bb568930e0b9",
-        "27eda4b0-2a8a-4e55-acea-cb5d3ccec233"
+        "27eda4b0-2a8a-4e55-acea-cb5d3ccec233",
+        "14efb551-ecb6-4564-a567-dec20552147d"
     ],
     "tutorial": ""
 }

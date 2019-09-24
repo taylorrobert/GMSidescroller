@@ -3,6 +3,7 @@
 #macro VOID		0
 #macro SOLID	1
 #macro PLATFORM 2
+#macro DEATH	3
 
 
 //camera
@@ -19,3 +20,6 @@
 
 //chest
 #macro OPEN				0
+
+//arrow
+#macro LAYER_CHANGE		0

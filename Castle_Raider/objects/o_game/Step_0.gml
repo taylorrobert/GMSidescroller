@@ -1,4 +1,4 @@
-show_debug_overlay(true);
+//show_debug_overlay(true);
 
 
 if (mouse_check_button_pressed(mb_left)) {
@@ -6,3 +6,10 @@ if (mouse_check_button_pressed(mb_left)) {
 		instance_create_layer(mouse_x, mouse_y, "Gems", o_gem);	
 	}
 }
+
+if (mouse_check_button_pressed(mb_right)) {
+	repeat(1) {
+		instance_create_layer(mouse_x, mouse_y, "Gems", o_arrow);	
+	}
+}
+

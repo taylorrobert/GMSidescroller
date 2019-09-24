@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00bb0fde-d753-4da2-abcc-88ca27fb722e",
+            "Value": {
+                "id": "ad140f1e-a4fe-4a02-9843-f4172e6df01e",
+                "resourcePath": "views\\00bb0fde-d753-4da2-abcc-88ca27fb722e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "02632bb5-1d2e-4954-b027-c1bd6c91d490",
             "Value": {
                 "id": "f9871db3-4af1-495d-92bb-99b924f28c62",
@@ -127,6 +135,14 @@
             }
         },
         {
+            "Key": "1ad2e235-575b-465c-a4e2-0315b7b20201",
+            "Value": {
+                "id": "991a35bf-517c-4130-8359-14e1da083461",
+                "resourcePath": "views\\1ad2e235-575b-465c-a4e2-0315b7b20201.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "22dd36e1-be74-43c2-87e3-846b2c3187bb",
             "Value": {
                 "id": "71107b98-c46f-4227-93d1-f343c1c365ad",
@@ -155,6 +171,22 @@
             "Value": {
                 "id": "1e6c6bca-676c-4292-82d1-1c2c25b00b87",
                 "resourcePath": "sprites\\s_player_crouch\\s_player_crouch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "259c6b7e-4d61-415f-a8af-a3a64bb92cb2",
+            "Value": {
+                "id": "432e7826-8d13-4637-9a4a-1e0671267f41",
+                "resourcePath": "scripts\\bug_anim\\bug_anim.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "268508f7-73ae-4191-be3c-e62abd28933a",
+            "Value": {
+                "id": "77260fe6-0382-484d-85ca-bfff9445e622",
+                "resourcePath": "sprites\\s_bug_idle\\s_bug_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -308,6 +340,14 @@
                 "id": "90f6715d-1397-46e8-99c3-60fb1b6ae459",
                 "resourcePath": "sprites\\s_player_knockback\\s_player_knockback.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "52160041-06d6-4980-a767-d9115113a236",
+            "Value": {
+                "id": "34d3b809-ffa0-4fa7-bb50-e36880e669ad",
+                "resourcePath": "objects\\o_bug\\o_bug.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -591,6 +631,14 @@
             }
         },
         {
+            "Key": "99a64f91-be44-4af9-a40d-70437a3097cf",
+            "Value": {
+                "id": "95023be1-748e-4f99-bd99-42de433fef0c",
+                "resourcePath": "scripts\\bug_idle_state\\bug_idle_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",
             "Value": {
                 "id": "0ab96b64-7c7a-45ca-bc7c-6fda15909dd3",
@@ -723,6 +771,14 @@
             "Value": {
                 "id": "6caca0df-9fc4-42d4-91bb-f429a86eb904",
                 "resourcePath": "scripts\\player_crouch_state\\player_crouch_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b6a94170-d6c0-48ad-a465-b065f81d7c80",
+            "Value": {
+                "id": "c53e7602-e7e7-4e76-a252-4b241ceabc7f",
+                "resourcePath": "scripts\\bug_patrol_state\\bug_patrol_state.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -876,6 +932,14 @@
                 "id": "07b20ad5-4fd6-470f-b4a4-699f0dd62bfa",
                 "resourcePath": "objects\\o_player_dust_jump\\o_player_dust_jump.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dbb8cb0d-17e1-4ad2-b88c-8b53c4dc019a",
+            "Value": {
+                "id": "179c7fe5-aa78-4ce1-88d7-fe1bd8a112c2",
+                "resourcePath": "views\\dbb8cb0d-17e1-4ad2-b88c-8b53c4dc019a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1038,6 +1102,9 @@
         "fe72864b-1080-4dcc-bcc5-8196a89e9a11",
         "b28ba9a5-2b6e-473f-8196-9b876721ab68",
         "3c253538-daea-4bac-9f52-bb568930e0b9",
+        "99a64f91-be44-4af9-a40d-70437a3097cf",
+        "b6a94170-d6c0-48ad-a465-b065f81d7c80",
+        "259c6b7e-4d61-415f-a8af-a3a64bb92cb2",
         "27eda4b0-2a8a-4e55-acea-cb5d3ccec233",
         "14efb551-ecb6-4564-a567-dec20552147d"
     ],

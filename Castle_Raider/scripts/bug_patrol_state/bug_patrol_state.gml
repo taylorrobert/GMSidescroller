@@ -1,4 +1,4 @@
-//frog_idle_state
+//bug_patrol_state
 //check health
 checkEnemyHP();
 
@@ -15,6 +15,10 @@ if (abs(start_x - x) > patrol_distance) {
 if (facing) var side = bbox_right else var side = bbox_left;
 var t1 = tilemap_get_at_pixel(global.map, side + sign(hsp), y);
 if (t1 == SOLID) state = bug_states.idle;
+
+if (distance_to_object(o_player) < chase_distance and o_player.hp > 0) {
+	state = bug_states.chase;	
+}
 
 
 //apply movement

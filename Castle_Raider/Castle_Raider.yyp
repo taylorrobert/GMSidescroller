@@ -567,6 +567,14 @@
             }
         },
         {
+            "Key": "83c31558-139e-47d9-a80f-937c1a16b6f1",
+            "Value": {
+                "id": "b552dd09-1fbd-4ea4-8ef2-639fa2ce87c4",
+                "resourcePath": "scripts\\bug_chase_state\\bug_chase_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
             "Value": {
                 "id": "c71ac813-b275-48d0-a1a6-adaa9e112227",
@@ -723,6 +731,14 @@
             "Value": {
                 "id": "48b17f34-5090-4d08-860d-d5d7f7c21748",
                 "resourcePath": "sprites\\s_player_attack_walk\\s_player_attack_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a806a04e-8e3f-4528-9796-1ab9f6942418",
+            "Value": {
+                "id": "4b7c31f5-c3a6-4450-bb2f-41f70248afe4",
+                "resourcePath": "sprites\\s_bug_chase\\s_bug_chase.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1099,12 +1115,13 @@
         "7787997b-c2f6-477e-ae25-c4348c8c0d9c",
         "9a473b1e-5348-4ba7-b0e6-5f9a82f56c3e",
         "6479bb59-f4de-4ee8-be83-87d70c3597cf",
+        "99a64f91-be44-4af9-a40d-70437a3097cf",
+        "83c31558-139e-47d9-a80f-937c1a16b6f1",
+        "b6a94170-d6c0-48ad-a465-b065f81d7c80",
+        "259c6b7e-4d61-415f-a8af-a3a64bb92cb2",
         "fe72864b-1080-4dcc-bcc5-8196a89e9a11",
         "b28ba9a5-2b6e-473f-8196-9b876721ab68",
         "3c253538-daea-4bac-9f52-bb568930e0b9",
-        "99a64f91-be44-4af9-a40d-70437a3097cf",
-        "b6a94170-d6c0-48ad-a465-b065f81d7c80",
-        "259c6b7e-4d61-415f-a8af-a3a64bb92cb2",
         "27eda4b0-2a8a-4e55-acea-cb5d3ccec233",
         "14efb551-ecb6-4564-a567-dec20552147d"
     ],

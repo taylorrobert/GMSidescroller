@@ -1,4 +1,4 @@
-//frog_idle_state
+//bug_idle_state
 //check health
 checkEnemyHP();
 
@@ -17,6 +17,9 @@ else {
 	wait_time--;	
 }
 
+if (distance_to_object(o_player) < chase_distance and o_player.hp > 0) {
+	state = bug_states.chase;	
+}
 
 //apply movement
 collision();

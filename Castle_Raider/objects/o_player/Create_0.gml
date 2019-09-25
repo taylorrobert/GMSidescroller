@@ -41,9 +41,12 @@ facing = room_start_facing_direction;
 flash_counter = 0;
 hurt = false;
 hurt_time = room_speed;
-
 hp = 5;
 max_hp = hp;
+
+//how long enemies get knocked back for when hit
+knockback_time = room_speed / 2;
+knockback_distance = 1.5;
 
 left = 0;
 right = 0;

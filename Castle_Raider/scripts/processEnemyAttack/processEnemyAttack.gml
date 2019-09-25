@@ -56,6 +56,17 @@ if (o_player.hp > 0 and !hurt) {
 			
 			//screen shake
 			scr_screen_shake(.125, -1);
+			
+			//enemy gets knocked back too
+			with (other) {
+				if (object_index == o_bug) {
+					//zero decimal to get exact movement
+					hsp_decimal = 0;
+					//knock enemy away from player
+					hsp = sign(x - o_player.x) * other.knockback_distance;
+					alarm[KNOCKEDBACK] = other.knockback_time;
+				}
+			}
 		}
 	}
 }

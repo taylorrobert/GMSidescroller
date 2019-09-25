@@ -48,6 +48,14 @@ if (col == c_black) {
 					col = c_red;
 				break;
 			}
+		break;
+		case 5:
+			//hp
+			intensity = .3;
+			radius = 18;
+			col = c_white;
+			flickering = false;
+		break;
 	}
 
 }

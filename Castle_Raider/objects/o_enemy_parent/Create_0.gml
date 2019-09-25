@@ -7,3 +7,6 @@ flash_counter = 0;
 drag = 0.12;
 
 death_gem_value = random_range(2, 5);
+
+//hp
+hp_drop_chance = .3;

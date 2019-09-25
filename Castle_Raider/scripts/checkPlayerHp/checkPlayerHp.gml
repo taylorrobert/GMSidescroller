@@ -6,4 +6,5 @@ if (hp <= 0) {
 	image_speed = 1;
 	scale_x = 1;
 	scale_y = 1;
+	lives--;
 }

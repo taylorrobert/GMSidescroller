@@ -8,11 +8,12 @@ if (o_player.hp > 0) {
 	target_y = o_player.yprevious - sprite_get_height(o_player.sprite_index) / 2;
 } else {
 	//return to start position if player has died
-	target_x = xstart;
-	target_y = ystart;
+	target_x = start_x;
+	target_y = start_y;
 	//return to idle once at or near start pos
-	if (abs(x - xstart) < 2 and abs(y - ystart) < 2) state = bug_states.idle;
-	state = bug_states.idle;	
+	if (abs(x - start_x) < 2 and abs(y - start_y) < 2) {
+		state = bug_states.idle;
+	}
 }
 
 //calculate movement

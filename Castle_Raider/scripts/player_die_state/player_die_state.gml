@@ -15,13 +15,13 @@ if (abs(hsp) <= 0.5) hsp = 0
 //check state
 //change state after animation
 if (image_index  >= image_number - 1) {
-	image_speed = 0;
-	getInput();
-	if (jump or attack) {
-		if (lives <= 0) {
-			game_restart();	
-		}
-		else {
+	image_speed = 0;	
+	if (lives <= 0) {
+		o_game.game_over_lose = true;
+	}
+	else {
+		getInput();
+		if (jump or attack) {
 			room_restart();
 			//reset player
 			x = room_start_pos_x;

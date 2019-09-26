@@ -28,6 +28,7 @@ facing = 1;
 
 //gems
 gems = 0;
+gems_value = 50;
 
 //set rm_00 start location
 room_start_pos_x = 65;
@@ -51,6 +52,7 @@ knockback_distance = 1.5;
 //lives
 lives_initial = 3;
 lives = lives_initial;
+lives_value = 1000;
 
 left = 0;
 right = 0;

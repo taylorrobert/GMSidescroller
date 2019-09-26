@@ -13,3 +13,10 @@ gem_sparks = 6;
 
 //enemy sparks
 enemy_sparks = 6;
+
+//game over
+//game over and we lost
+game_over_lose = false;
+
+//game over and we won
+game_over_won = false;

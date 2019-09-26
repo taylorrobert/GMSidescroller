@@ -8,7 +8,7 @@ if (mouse_check_button_pressed(mb_left)) {
 }
 
 if (mouse_check_button_pressed(mb_right)) {
-	o_player.hp = 0;
+	if (instance_exists(o_player)) o_player.hp = 0;
 }
 
 if (game_over_lose) {

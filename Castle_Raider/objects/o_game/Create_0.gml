@@ -20,3 +20,11 @@ game_over_lose = false;
 
 //game over and we won
 game_over_won = false;
+
+//main menu
+current_frame = 0;
+
+//fade in menu
+fade_in = true;
+alpha = 1;
+fade_spd = 0.02;

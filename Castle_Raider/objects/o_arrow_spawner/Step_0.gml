@@ -4,7 +4,7 @@ if (onScreen(global.tile_size)) {
 	//object is within the screen
 	if (can_fire) {
 		can_fire = false;	
-		
+		fire_delay = fire_delay_initial;
 		//set spawn position from center
 		var ypos = ((sprite_get_height(sprite_index) / 2) - 2) * spawn_pos;
 		//switch position for next arrow
@@ -26,7 +26,10 @@ if (onScreen(global.tile_size)) {
 		fire_delay--;
 		if (fire_delay <= 0) {
 			can_fire = true;
-			fire_delay = fire_delay_initial;
+			
 		}
 	}
+}
+else {
+	fire_delay--;	
 }

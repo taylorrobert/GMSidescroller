@@ -22,16 +22,17 @@ if (image_index  >= image_number - 1) {
 	else {
 		getInput();
 		if (jump or attack) {
-			room_restart();
-			//reset player
-			x = room_start_pos_x;
-			y = room_start_pos_y;
-			facing = room_start_facing_direction;
-			state = states.idle;
-			//reset speed after death pause
-			image_speed = 1;
-			//reset hp
-			hp = max_hp;
+			//room_restart();
+			////reset player
+			//x = room_start_pos_x;
+			//y = room_start_pos_y;
+			//facing = room_start_facing_direction;
+			//state = states.idle;
+			////reset speed after death pause
+			//image_speed = 1;
+			////reset hp
+			//hp = max_hp;
+			fadeToRoom(room, room_start_pos_x, room_start_pos_y, room_start_facing_direction, c_black);
 			//allow instant camera panning
 			with(o_camera) {
 				//enable instance panning	

@@ -28,3 +28,13 @@ current_frame = 0;
 fade_in = true;
 alpha = 1;
 fade_spd = 0.02;
+
+
+savename = "game.sav";
+highscore = 0;
+
+//open save file
+ini_open(savename);
+//read an old highscore or set it to 0 if none
+highscore = ini_read_real("Score", "Highscore", 0);
+ini_close();

@@ -4,5 +4,5 @@ if (!instance_exists(o_fade)) {
 }
 else {
 	//stop animation
-	image_index = 0;
+	if (state != states.die) image_index = 0;
 }

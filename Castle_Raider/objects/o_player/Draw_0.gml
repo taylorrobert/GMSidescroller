@@ -1,6 +1,8 @@
 /// @description 
 // You can write your code in this editor
 
+//draw_sprite_ext(mask_index,0,x,y,image_xscale,image_yscale,0,c_red,1);  
+
 //flash red when taking damage
 if (hurt) {
 	flash_counter++;

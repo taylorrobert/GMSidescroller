@@ -19,3 +19,8 @@ if (game_over_lose) {
 		}
 	}
 }
+
+//reduce delay time in game over room
+if (game_over_won) {
+	game_over_won_delay--;	
+}

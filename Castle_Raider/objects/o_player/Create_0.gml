@@ -96,29 +96,30 @@ states_array[states.die]			= player_die_state;
 
 
 //sprites array
-sprites_array[states.idle]			= s_player_idle;
-sprites_array[states.walk]			= s_player_walk;
-sprites_array[states.jump]			= s_player_jump;
-sprites_array[states.attack]		= s_player_attack;
-sprites_array[states.block]			= s_player_block;
-sprites_array[states.crouch]		= s_player_crouch;
-sprites_array[states.crouch_block]	= s_player_crouch_block;
-sprites_array[states.hurting]		= s_player_hurting;
-sprites_array[states.knockback]		= s_player_knockback;
+sprites_array[states.idle]			= s_warped_player_idle;
+sprites_array[states.walk]			= s_warped_player_run;
+sprites_array[states.jump]			= s_warped_player_jump;
+sprites_array[states.attack]		= s_warped_player_run_shoot;
+sprites_array[states.block]			= s_warped_player_idle;
+sprites_array[states.crouch]		= s_warped_player_duck;
+sprites_array[states.crouch_block]	= s_warped_player_duck;
+sprites_array[states.hurting]		= s_warped_player_hurt;
+sprites_array[states.knockback]		= s_warped_player_hurt;
 sprites_array[states.die]			= s_player_die;
 
 
+
 //mask array
-mask_array[states.idle]			= s_player_idle;
-mask_array[states.walk]			= s_player_idle;
-mask_array[states.jump]			= s_player_idle;
-mask_array[states.attack]		= s_player_idle;
-mask_array[states.block]		= s_player_idle;
-mask_array[states.crouch]		= s_player_crouch;
-mask_array[states.crouch_block]	= s_player_crouch;
-mask_array[states.hurting]		= s_player_idle;
-mask_array[states.knockback]	= s_player_idle;
-mask_array[states.die]	= s_player_die;
+mask_array[states.idle]			= s_warped_player_idle;
+mask_array[states.walk]			= s_warped_player_idle;
+mask_array[states.jump]			= s_warped_player_idle;
+mask_array[states.attack]		= s_warped_player_idle;
+mask_array[states.block]		= s_warped_player_idle;
+mask_array[states.crouch]		= s_warped_player_idle;
+mask_array[states.crouch_block]	= s_warped_player_idle;
+mask_array[states.hurting]		= s_warped_player_idle;
+mask_array[states.knockback]	= s_warped_player_idle;
+mask_array[states.die]			= s_warped_player_idle;
 
 
 

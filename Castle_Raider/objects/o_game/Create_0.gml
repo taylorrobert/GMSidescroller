@@ -21,6 +21,9 @@ game_over_lose = false;
 //game over and we won
 game_over_won = false;
 
+//score delay
+game_over_won_delay = room_speed * 3;
+
 //main menu
 current_frame = 0;
 

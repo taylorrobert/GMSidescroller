@@ -31,6 +31,7 @@ var t2 = tilemap_get_at_pixel(global.map, side + hsp, bbox_bottom);
 
 if ((t1 != VOID) and (t1 != PLATFORM)) or 
 	((t2 != VOID) and (t2 != PLATFORM)) {
+		state = state;
 	//collision found
 	if (hsp > 0) x = x - (x mod global.tile_size) + global.tile_size - 1 - (side-x);
 	else x = x - (x mod global.tile_size) - (side - x);

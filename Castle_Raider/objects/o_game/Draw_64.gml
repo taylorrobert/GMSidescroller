@@ -6,71 +6,82 @@ var gui_height = display_get_gui_height();
 
 if (room != rm_menu) {
 
-	
+	if (room != rm_game_end) {
+		//gems
+		draw_set_font(fnt_stats);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_middle);
+		var color = make_color_rgb(173, 144, 159);
+		draw_set_color(color);
 
+		//set draw location
+		var xx = gui_width - 92;
+		var yy = 2;
+		draw_sprite(s_gem_gui, 0, xx, yy);
 
+		//text
+		var text_xx = 7;
+		var text_yy = 22;
+		draw_set_color(c_black);
+		draw_text(xx + text_xx + 1, yy + text_yy + 1, o_player.gems);
+		draw_set_color(color);
+		draw_text(xx + text_xx, yy + text_yy, o_player.gems);
 
-	//gems
-	draw_set_font(fnt_stats);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_middle);
-	var color = make_color_rgb(173, 144, 159);
-	draw_set_color(color);
+		//hp bar
+		xx = 48;
+		yy = 25;
+		draw_sprite(s_hp_bar, 1, xx, yy);
+		draw_sprite_ext(s_hp_bar, 2, xx, yy, o_player.hp/o_player.max_hp, 1, 0, c_white, image_alpha);
+		draw_sprite(s_hp_bar, 0, xx, yy);
 
-	//set draw location
-	var xx = gui_width - 92;
-	var yy = 2;
-	draw_sprite(s_gem_gui, 0, xx, yy);
-
-	//text
-	var text_xx = 7;
-	var text_yy = 22;
-	draw_set_color(c_black);
-	draw_text(xx + text_xx + 1, yy + text_yy + 1, o_player.gems);
-	draw_set_color(color);
-	draw_text(xx + text_xx, yy + text_yy, o_player.gems);
-
-	//hp bar
-	xx = 48;
-	yy = 25;
-	draw_sprite(s_hp_bar, 1, xx, yy);
-	draw_sprite_ext(s_hp_bar, 2, xx, yy, o_player.hp/o_player.max_hp, 1, 0, c_white, image_alpha);
-	draw_sprite(s_hp_bar, 0, xx, yy);
-
-	//lives
-	xx = 48;
-	yy = 32;
-	var gap = 22;
-	if (lives > 0) {
-		for (var i = 0; i < lives; i++) {
-			draw_sprite(s_lives, 0, xx + i * gap, yy);	
+		//lives
+		xx = 48;
+		yy = 32;
+		var gap = 22;
+		if (lives > 0) {
+			for (var i = 0; i < lives; i++) {
+				draw_sprite(s_lives, 0, xx + i * gap, yy);	
+			}
 		}
+
+
+
+		//score
+		xx = gui_width / 2;
+		yy = 11;
+		draw_sprite(s_score, 0, xx, yy);
+		draw_set_halign(fa_right);
+		text_xx = 54;
+		text_yy = 14;
+		//draw shadow
+		draw_set_color(c_black);
+		draw_text(xx + text_xx + 1, yy + text_yy + 1, score);
+		//draw text
+		draw_set_color(color);
+		draw_text(xx + text_xx, yy + text_yy, score);
 	}
 
 
 
-	//score
-	xx = gui_width / 2;
-	yy = 11;
-	draw_sprite(s_score, 0, xx, yy);
-	draw_set_halign(fa_right);
-	text_xx = 54;
-	text_yy = 14;
-	//draw shadow
-	draw_set_color(c_black);
-	draw_text(xx + text_xx + 1, yy + text_yy + 1, score);
-	//draw text
-	draw_set_color(color);
-	draw_text(xx + text_xx, yy + text_yy, score);
+	
 
 	//game over
-	if (game_over_lose) {
+	if (game_over_lose or (game_over_won and game_over_won_delay <= 0)) {
 		//center gui
-		var mx = gui_width/2;
-		var my = gui_height/2;
+		if (game_over_won) {
+			var mx = gui_width/4;
+			var my = gui_height/2;
+		}
+		else {
+			//game over lose	
+			var mx = gui_width/2;
+			var my = gui_height/2;
+		}
+		
 		//draw game over
 		draw_sprite(s_game_over, 0, mx, my);
-		draw_sprite(s_game_over_text, 0, mx, my);
+		if (game_over_lose) var _index = 0 else var _index = 1;
+		draw_sprite(s_game_over_text, _index, mx, my);
 		draw_set_halign(fa_right);
 		draw_set_color(c_white);
 	
@@ -153,7 +164,7 @@ else {
 		//allow game start as menu has dropped
 		if ((keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0, gp_face1))
 				and !instance_exists(o_fade)) {
-			fadeToRoom(rm_00, 0, 0, 1, c_black);	
+			fadeToRoom(rm_start, 0, 0, 1, c_black);	
 		}
 	}
 	

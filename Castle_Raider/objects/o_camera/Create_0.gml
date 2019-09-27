@@ -1,12 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var w = camera_get_view_width(view_camera[0]);
-var h = camera_get_view_height(view_camera[0]);
+cameraToUse = 1;
+
+var w = camera_get_view_width(view_camera[cameraToUse]);
+var h = camera_get_view_height(view_camera[cameraToUse]);
 
 //create camera
 camera = camera_create_view(0, 0, w, h, 0, -1, 1, 128, 128);
-view_set_camera(0, camera);
+view_set_camera(cameraToUse, camera);
 
 //camera following variables
 follow = noone;

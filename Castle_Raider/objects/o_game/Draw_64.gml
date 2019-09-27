@@ -1,5 +1,8 @@
 //720, 360
 
+//used for testing level gen code
+if (!layer_get_id("Player")) return;
+
 //get gui dimensions
 var gui_width = display_get_gui_width();
 var gui_height = display_get_gui_height();

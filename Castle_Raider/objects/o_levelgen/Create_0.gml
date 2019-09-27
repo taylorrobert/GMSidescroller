@@ -45,8 +45,14 @@ while (carved < total_area) {
 
 for (i = 0; i < room_width div generated_tile_size; i++) {
 	for (var j = 0; j < room_height div generated_tile_size; j++) {
+		//var object = instance_place(i * generated_tile_size, j * generated_tile_size, o_wall);
+		//var sliceId = get9Slice(object);
+		
+		//instance_create_layer(i * generated_tile_size, j * generated_tile_size, "TileMid", o_wall);
+		//instance_create_layer(i * generated_tile_size, j * generated_tile_size, "Collision", o_wall);
 		var object = instance_place(i * generated_tile_size, j * generated_tile_size, o_wall);
-		var sliceId = get9Slice(object);
+		if (object != noone) tilemap_set(t_collisions_16, 1, i, j);
+		//draw_tile(t_collisions_16,1,1,i*generated_tile_size,j*generated_tile_size);		
 	}
 }
 

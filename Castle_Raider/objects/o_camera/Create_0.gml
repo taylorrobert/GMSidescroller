@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-cameraToUse = 1;
+cameraToUse = 0;
 
 var w = camera_get_view_width(view_camera[cameraToUse]);
 var h = camera_get_view_height(view_camera[cameraToUse]);

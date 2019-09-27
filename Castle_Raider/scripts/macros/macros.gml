@@ -1,6 +1,6 @@
 ///macros()
 
-#macro TILE_SIZE	16
+
 
 #macro VOID		0
 #macro SOLID	1
@@ -27,3 +27,16 @@
 
 //arrow
 #macro LAYER_CHANGE		0
+
+
+//Generator
+#macro G_9SLICE_NONE			-1
+#macro G_9SLICE_TOPLEFT			0
+#macro G_9SLICE_TOPMID			1
+#macro G_9SLICE_TOPRIGHT		2
+#macro G_9SLICE_MIDLEFT			3
+#macro G_9SLICE_CENTER			4
+#macro G_9SLICE_MIDRIGHT		5
+#macro G_9SLICE_BOTTOMLEFT		6
+#macro G_9SLICE_BOTTOMMID		7
+#macro G_9SLICE_BOTTOMRIGHT		8

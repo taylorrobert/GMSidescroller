@@ -33,15 +33,15 @@ global.ch = camera_get_view_height(camera);
 //background scrolling
 var layer_id = layer_get_id("Background");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.6))
-layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.1))
+layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.4))
 
 layer_id = layer_get_id("Background2");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.5))
-layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.1))
+layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.3))
 
 layer_id = layer_get_id("Background3");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.4))
-layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.1))
+layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.2))
 
 layer_id = layer_get_id("Background4");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.3))
@@ -49,4 +49,4 @@ layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.1))
 
 layer_id = layer_get_id("Background5");
 layer_x(layer_id, lerp(0, camera_get_view_x(view_camera[0]), 0.2))
-layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.1))
+layer_y(layer_id, lerp(0, camera_get_view_y(view_camera[0]), 0.0))

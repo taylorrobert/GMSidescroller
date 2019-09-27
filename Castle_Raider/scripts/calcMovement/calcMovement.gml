@@ -1,7 +1,39 @@
 /// calcMovement();
 
-hsp += (right - left) * walk_spd;
-vsp += global.grav;
+
+var hdelta = (right - left) * walk_spd;
+var vdelta = global.grav;
+
+//if (sign(hdelta)) {
+//	var next = tilemap_get_at_pixel(global.map, bbox_right + hdelta, bbox_bottom);
+//	if (next == SOLID) 
+//		hdelta = 0;
+//	//if (next == SOLID) hdelta = hdelta - (bbox_right + hdelta)
+//	//if (bbox_right + hdelta
+//}
+//else {
+//	var next = tilemap_get_at_pixel(global.map, bbox_left - hdelta, bbox_bottom);
+//	if (next == SOLID) 
+//		hdelta = 0;
+//}
+
+//if (sign(vdelta)) {
+//	var next = tilemap_get_at_pixel(global.map, bbox_bottom + vdelta, bbox_left);
+//	if (next == SOLID) 
+//		vdelta = 0;
+//	//if (next == SOLID) hdelta = hdelta - (bbox_right + hdelta)
+//	//if (bbox_right + hdelta
+//}
+//else {
+//	var next = tilemap_get_at_pixel(global.map, bbox_top - vdelta, bbox_left);
+//	if (next == SOLID) 
+//		vdelta = 0;
+//}
+
+
+
+hsp += hdelta;
+vsp += vdelta;
 
 //drag
 hsp = lerp(hsp, 0, drag);

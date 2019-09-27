@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "1169dd3a-1da1-4f87-a47f-f06a2c06f016",
+            "Value": {
+                "id": "1697a6ca-f74b-4b95-bf7e-8ed31de1006a",
+                "resourcePath": "tilesets\\t_warped_caves_tilesets\\t_warped_caves_tilesets.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "12d5db3c-132c-4617-8b74-39f5599ac3c1",
             "Value": {
                 "id": "10d4ce97-83e6-4244-98fc-3b7044e01e04",
@@ -244,6 +252,14 @@
                 "id": "1e6c6bca-676c-4292-82d1-1c2c25b00b87",
                 "resourcePath": "sprites\\s_player_crouch\\s_player_crouch.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "25331e24-7a19-4b34-8fce-ce09476ba9ba",
+            "Value": {
+                "id": "a787b00a-a852-40a4-a694-1f469798f653",
+                "resourcePath": "tilesets\\t_warped_caves_walls\\t_warped_caves_walls.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -1204,6 +1220,14 @@
                 "id": "59f0c65e-e2cc-4d0d-b418-8d90b3a4fb68",
                 "resourcePath": "sprites\\stone_head\\stone_head.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "97fef089-0941-4778-9a0f-ec0c8e471fb3",
+            "Value": {
+                "id": "3e1b95d6-7dd8-4b0f-8efe-88357486a6fa",
+                "resourcePath": "views\\97fef089-0941-4778-9a0f-ec0c8e471fb3.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

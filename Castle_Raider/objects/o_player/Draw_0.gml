@@ -1,7 +1,7 @@
 /// @description 
 // You can write your code in this editor
 
-//draw_sprite_ext(mask_index,0,x,y,image_xscale,image_yscale,0,c_red,1);  
+//draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false);
 
 //flash red when taking damage
 if (hurt) {

@@ -62,10 +62,15 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 
 
 
+
 //fix into 9 slices
 for (i = 0; i < room_width div generated_tile_size; i++) {
 	for (var j = 0; j < room_height div generated_tile_size; j++) {
-		
+		lay_id = layer_get_id("NineSliceTest");
+		map_id = layer_tilemap_get_id(lay_id);
+		data = tilemap_get(map_id, 0, 0);		
+		var nine = get9Slice(i, j, generated_tile_size, false)
+		tilemap_set(map_id, nine, i, j);
 	}
 }
 

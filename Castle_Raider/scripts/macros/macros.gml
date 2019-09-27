@@ -30,6 +30,7 @@
 
 
 //Generator
+#macro G_9SLICE_UNKNOWN			-999
 #macro G_9SLICE_NONE			-1
 #macro G_9SLICE_TOPLEFT			0
 #macro G_9SLICE_TOPMID			1

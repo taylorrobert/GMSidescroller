@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "0b183b73-6251-4137-b725-e37a80969442",
+            "Value": {
+                "id": "ab4ed97b-0e62-42cb-be83-11091e531379",
+                "resourcePath": "tilesets\\t_9slice_test\\t_9slice_test.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "0f4977b9-ed34-42ae-ba5e-536e5496083c",
             "Value": {
                 "id": "5253aff7-b1e9-4014-ba6f-74b9e20d5485",
@@ -836,6 +844,14 @@
                 "id": "0bba0f48-b072-4d6d-ad5b-263e22699477",
                 "resourcePath": "objects\\o_enemy_parent\\o_enemy_parent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6fdb165b-e55e-40eb-aaaa-4afb8fce479c",
+            "Value": {
+                "id": "ad861364-5300-4e76-b19f-0d333dd55f94",
+                "resourcePath": "sprites\\s_9slice_test\\s_9slice_test.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1639,6 +1655,14 @@
             }
         },
         {
+            "Key": "c5e4c7e7-3acc-4957-9729-b367b426e4a4",
+            "Value": {
+                "id": "8e0ee83a-c09b-4bfb-a262-8af3323f91a8",
+                "resourcePath": "scripts\\nineSliceTileLocatorTest\\nineSliceTileLocatorTest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c8cd8bf9-11af-4d93-bdae-9c37802d631a",
             "Value": {
                 "id": "64518490-c6d6-4c3a-ba24-b4f4db99ee6a",
@@ -2222,7 +2246,8 @@
         "99c27a60-aff7-4b01-8bde-cc8df880c777",
         "15fe58b8-f2f0-4ef4-a524-1c5826fd2540",
         "3f04e857-f66f-45e3-8e21-b70427b5946b",
-        "ba75db76-bba2-4c3b-a682-be45798168ca"
+        "ba75db76-bba2-4c3b-a682-be45798168ca",
+        "c5e4c7e7-3acc-4957-9729-b367b426e4a4"
     ],
     "tutorial": ""
 }

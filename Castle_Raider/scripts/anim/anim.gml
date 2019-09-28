@@ -14,7 +14,7 @@ switch (state) {
 			image_speed = 0;
 		}
 		else {
-			image_speed = 1;			
+			image_speed = 1;		
 		}
 		//if (jumps 
 		//if (vsp < 0) image_index = 0;
@@ -33,5 +33,8 @@ switch (state) {
 			if (vsp < 0) image_index = 0;
 			else image_index = 1;
 		}
+	break;
+	case states.idle:
+		image_speed = 1;
 	break;
 }

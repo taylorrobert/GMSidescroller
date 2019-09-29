@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "3a9fc21e-1c59-40cd-8937-f7ad8703c407",
+            "Value": {
+                "id": "8db85ffb-17d9-4cca-b62c-b2d7f702dab9",
+                "resourcePath": "scripts\\tile_collision\\tile_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3bb76155-1c22-45ea-8690-e670aeede964",
             "Value": {
                 "id": "e842f191-a09a-4072-8ba5-d6d164b964c9",
@@ -2247,7 +2255,8 @@
         "15fe58b8-f2f0-4ef4-a524-1c5826fd2540",
         "3f04e857-f66f-45e3-8e21-b70427b5946b",
         "ba75db76-bba2-4c3b-a682-be45798168ca",
-        "c5e4c7e7-3acc-4957-9729-b367b426e4a4"
+        "c5e4c7e7-3acc-4957-9729-b367b426e4a4",
+        "3a9fc21e-1c59-40cd-8937-f7ad8703c407"
     ],
     "tutorial": ""
 }

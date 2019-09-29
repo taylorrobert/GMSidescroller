@@ -94,7 +94,7 @@ if (debug) {
 		out += row + "#";		
 	}
 	
-	//show_message( string_hash_to_newline(out));
+	show_message( string_hash_to_newline(out));
 	
 }
 	

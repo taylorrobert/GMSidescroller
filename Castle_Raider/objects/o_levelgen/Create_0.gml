@@ -1,6 +1,9 @@
 
 generated_tile_size = 16;
 tile_group_size = 32;
+side_buffer = 5;
+turn_chance = 50;
+total_area = 200;
 
 for (i = 0; i < room_width div generated_tile_size; i++) {
 	for (var j = 0; j < room_height div generated_tile_size; j++) {		
@@ -10,30 +13,31 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 
 
 var dir = 0;
-var total_area = 300;
 var carved = 0;
 
 while (carved < total_area) {
-	if (chance(50)) {		
+	if (chance(turn_chance)) {		
 		dir = choose(0, 1, 2, 3) * 90;
 	}
 	
 	var object = instance_place(x, y, o_wall);
 	
 	if (object) {
+		
+		for (var i = 0; i < tile_group_size; i += generated_tile_size) {
+			for (var j = 0; j < tile_group_size; j += generated_tile_size) {
+				instance_destroy(instance_place(x + generated_tile_size * (i div generated_tile_size), y + generated_tile_size * (j div generated_tile_size), o_wall));	
+			}
+		}
 		carved++;	
-		instance_destroy(object);
-		instance_destroy(instance_place(x + generated_tile_size, y, o_wall));
-		instance_destroy(instance_place(x, y + generated_tile_size, o_wall));
-		instance_destroy(instance_place(x + generated_tile_size, y + generated_tile_size, o_wall));
 	} 
 	
 	
 	x += lengthdir_x(tile_group_size, dir);
 	y += lengthdir_y(tile_group_size, dir);
 	
-	x = clamp(x, 0 + generated_tile_size * 3, room_width - generated_tile_size * 3);
-	y = clamp(y, 0 + generated_tile_size * 3, room_height - generated_tile_size * 3);
+	x = clamp(x, 0 + generated_tile_size * side_buffer, room_width - generated_tile_size * side_buffer);
+	y = clamp(y, 0 + generated_tile_size * side_buffer, room_height - generated_tile_size * side_buffer);
 	
 	
 }
@@ -53,7 +57,8 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 			lay_id = layer_get_id("TileMid");
 			map_id = layer_tilemap_get_id(lay_id);
 			data = tilemap_get(map_id, 0, 0);			
-			tilemap_set(map_id, 22, i, j);
+			tilemap_set(map_id, 22, i, j);		
+			
 		}		
 	}
 }

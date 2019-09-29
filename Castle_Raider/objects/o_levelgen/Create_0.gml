@@ -1,6 +1,6 @@
 
 generated_tile_size = 16;
-tile_group_size = 32;
+tile_group_size = 48;
 side_buffer = 5;
 turn_chance = 50;
 total_area = 200;
@@ -25,7 +25,9 @@ while (carved < total_area) {
 	if (object) {
 		
 		for (var i = 0; i < tile_group_size; i += generated_tile_size) {
+			//if (random(100) < 5)				continue;
 			for (var j = 0; j < tile_group_size; j += generated_tile_size) {
+				//if (random(100) < 5) continue;
 				instance_destroy(instance_place(x + generated_tile_size * (i div generated_tile_size), y + generated_tile_size * (j div generated_tile_size), o_wall));	
 			}
 		}

@@ -5,7 +5,7 @@ hsp = 0;
 vsp = 0;
 max_hsp = 2;
 walk_spd = 1.5;
-jump_spd = -5;
+jump_spd = -7;
 jump_dampener = 2.5;
 jumps_initial = 2;
 jumps = jumps_initial;
@@ -14,7 +14,7 @@ hsp_decimal = 0;
 vsp_decimal = 0;
 
 //friction
-drag = .12;
+drag = .10;
 
 //stretching
 scale_x = 1;
@@ -31,8 +31,8 @@ gems = 0;
 gems_value = 50;
 
 //set rm_00 start location
-room_start_pos_x = 65;
-room_start_pos_y = 127;
+room_start_pos_x = o_game.x;
+room_start_pos_y = o_game.y;
 room_start_facing_direction = 1;
 x = room_start_pos_x;
 y = room_start_pos_y;

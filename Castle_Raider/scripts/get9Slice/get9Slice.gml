@@ -7,65 +7,79 @@ var tiley = argument1;
 var tilesize = argument2;
 var debug = argument3;
 
-tilex = (tilex div tilesize) * tilesize;
-tiley = (tiley div tilesize) * tilesize;
+//tilex = (tilex div tilesize) * tilesize;
+//tiley = (tiley div tilesize) * tilesize;
 
 var lay_id = layer_get_id("Collisions");
 var map_id = layer_tilemap_get_id(lay_id);
 
 var map;
 
-var topleft = -999;
-var topmid = -999;
-var topright = -999;
 
-var midleft = -999;
-var center = -999;
-var midright = -999;
-
-var botleft = -999;
-var botmid = -999;
-var botright = -999;
 
 	
-map[0,0] = topleft = tilemap_get_at_pixel(map_id, tilex - tilesize, tiley - tilesize);
-map[0,1] = topmid = tilemap_get_at_pixel(map_id, tilex, tiley - tilesize);
-map[0,2] = topright = tilemap_get_at_pixel(map_id, tilex + tilesize, tiley - tilesize);
-								
-map[1,0] = midleft = tilemap_get_at_pixel(map_id, tilex - tilesize, tiley);
-map[1,1] = center = tilemap_get_at_pixel(map_id, tilex, tiley);
-map[1,2] = midright = tilemap_get_at_pixel(map_id, tilex + tilesize, tiley);
-								
-map[2,0] = botleft = tilemap_get_at_pixel(map_id, tilex - tilesize, tiley + tilesize);
-map[2,1] = botmid = tilemap_get_at_pixel(map_id, tilex, tiley + tilesize);
-map[2,2] = botright = tilemap_get_at_pixel(map_id, tilex - tilesize, tiley + tilesize);
+map[0,0] =  tilemap_get_at_pixel(map_id, tilex - tilesize, tiley - tilesize);
+map[0,1] = tilemap_get_at_pixel(map_id, tilex, tiley - tilesize);
+map[0,2] = tilemap_get_at_pixel(map_id, tilex + tilesize, tiley - tilesize);
+						
+map[1,0] =  tilemap_get_at_pixel(map_id, tilex - tilesize, tiley);
+map[1,1] = tilemap_get_at_pixel(map_id, tilex, tiley);
+map[1,2] = tilemap_get_at_pixel(map_id, tilex + tilesize, tiley);
+						
+map[2,0] =  tilemap_get_at_pixel(map_id, tilex - tilesize, tiley + tilesize);
+map[2,1] = tilemap_get_at_pixel(map_id, tilex, tiley + tilesize);
+map[2,2] = tilemap_get_at_pixel(map_id, tilex + tilesize, tiley + tilesize);
 
+
+var topleft		= map[0,0];
+var topmid		= map[0,1];
+var topright	= map[0,2];
+
+var midleft		= map[1,0];
+var center		= map[1,1];
+var midright	= map[1,2];
+
+var botleft		= map[2,0];
+var botmid		= map[2,1];
+var botright	= map[2,2];
+
+
+var slice = G_9SLICE_UNKNOWN;
 
 if (botmid == SOLID and midright == SOLID
-	and topmid != SOLID and midleft != SOLID) return G_9SLICE_TOPLEFT;
+	and topmid != SOLID and midleft != SOLID) 
+		slice = G_9SLICE_TOPLEFT;
 	
-if (midleft == SOLID and midright == SOLID
-	and topmid != SOLID) return G_9SLICE_TOPMID;
+else if (midleft == SOLID and midright == SOLID
+	and topmid != SOLID) 
+		slice = G_9SLICE_TOPMID;
 	
-if (botmid == SOLID and midleft == SOLID
-	and topmid != SOLID and midright != SOLID) return G_9SLICE_TOPRIGHT;
+else if (botmid == SOLID and midleft == SOLID
+	and topmid != SOLID and midright != SOLID)  
+		slice = G_9SLICE_TOPRIGHT;
 
-if (topmid == SOLID and botmid == SOLID
-	and midleft != SOLID) return G_9SLICE_MIDLEFT;
+else if (topmid == SOLID and botmid == SOLID
+	and midleft != SOLID)  
+		slice = G_9SLICE_MIDLEFT;
 
-if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID) return G_9SLICE_CENTER;
+else if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID)  
+		slice = G_9SLICE_CENTER;
 
-if (topmid == SOLID and botmid == SOLID
-	and midright != SOLID) return G_9SLICE_MIDRIGHT;
+else if (topmid == SOLID and botmid == SOLID
+	and midright != SOLID) 
+		slice = G_9SLICE_MIDRIGHT;
 
-if (topmid == SOLID and midright == SOLID
-	and midleft != SOLID and botmid != SOLID) return G_9SLICE_BOTTOMLEFT;
+else if (topmid == SOLID and midright == SOLID
+	and midleft != SOLID and botmid != SOLID)  
+		slice = G_9SLICE_BOTTOMLEFT;
 
-if (midleft == SOLID and midright == SOLID
-	and botmid != SOLID) return G_9SLICE_BOTTOMMID;
+else if (midleft == SOLID and midright == SOLID
+	and botmid != SOLID)  
+		slice = G_9SLICE_BOTTOMMID;
 	
-if (topmid == SOLID and midleft == SOLID
-	and botmid != SOLID and midright != SOLID) return G_9SLICE_BOTTOMRIGHT;
+else if (topmid == SOLID and midleft == SOLID
+	and botmid != SOLID and midright != SOLID)  
+		slice = G_9SLICE_BOTTOMRIGHT;
 
 
 if (debug) {
@@ -97,6 +111,8 @@ if (debug) {
 	show_message( string_hash_to_newline(out));
 	
 }
+
+return slice;
 	
 	
 	

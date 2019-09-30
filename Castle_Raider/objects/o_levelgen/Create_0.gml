@@ -55,34 +55,37 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 			var data = tilemap_get(map_id, 0, 0);
 			tilemap_set(map_id, SOLID, i, j);
 			
-			//draw basic tile layer			
-			lay_id = layer_get_id("TileMid");
-			map_id = layer_tilemap_get_id(lay_id);
-			data = tilemap_get(map_id, 0, 0);			
-			tilemap_set(map_id, 22, i, j);		
+			////draw basic tile layer			
+			//lay_id = layer_get_id("TileMid");
+			//map_id = layer_tilemap_get_id(lay_id);
+			//data = tilemap_get(map_id, 0, 0);			
+			//tilemap_set(map_id, 22, i, j);		
 			
 		}		
 	}
 }
 
 
-
-
-
-
 //fix into 9 slices
-for (i = 0; i < room_width div generated_tile_size; i++) {
-	for (var j = 0; j < room_height div generated_tile_size; j++) {
-		//lay_id = layer_get_id("Structure");
+for (i = 0; i < room_width; i += generated_tile_size) {
+	for (var j = 0; j < room_height; j += generated_tile_size) {
+		//lay_id = layer_get_id("Collisions");
 		//map_id = layer_tilemap_get_id(lay_id);
 		//data = tilemap_get(map_id, 0, 0);	
 		
-		//lay_id = layer_get_id("NineSliceTest");
-		//map_id = layer_tilemap_get_id(lay_id);
-		////data = tilemap_get(map_id, 0, 0);	
+		var object = instance_place(i, j, o_wall);
+		if (object != noone) {
+			lay_id = layer_get_id("NineSliceTest");
+			map_id = layer_tilemap_get_id(lay_id);
 		
-		//var nine = get9Slice(i, j, generated_tile_size, false)
-		//tilemap_set(map_id, nine, i, j);
+			var nine = get9Slice(i, j, generated_tile_size, false)
+			
+			var tileId = nineSliceTileLocatorTest(nine);
+			
+			if (nine > -1) tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);
+		}
+		
+		
 	}
 }
 

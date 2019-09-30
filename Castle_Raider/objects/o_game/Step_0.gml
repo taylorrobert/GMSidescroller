@@ -8,8 +8,16 @@ if (mouse_check_button_pressed(mb_left)) {
 }
 
 if (mouse_check_button_pressed(mb_right)) {
+	//kill player
 	//if (instance_exists(o_player)) o_player.hp = 0;
-	get9Slice(mouse_x, mouse_y, global.tile_size, true);
+	
+	//show 9slice info
+	//get9Slice(mouse_x, mouse_y, global.tile_size, true);
+	
+	//show tile locator text
+	var nine = get9Slice(mouse_x, mouse_y, global.tile_size, false);			
+	var tileId = nineSliceTileLocatorTest(nine);	
+	show_message(tileId);
 }
 
 if (game_over_lose) {

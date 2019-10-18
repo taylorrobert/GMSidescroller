@@ -46,12 +46,20 @@ var botright	= map[2,2];
 
 var slice = G_9SLICE_UNKNOWN;
 
+//none
+if (topleft != SOLID and topmid != SOLID and topright != SOLID
+	and midleft != SOLID and center != SOLID and midright != SOLID 
+	and botright != SOLID and botmid != SOLID and botright != SOLID)
+	slice = G_9SLICE_NONE
+
+//structural
 if (botmid == SOLID and midright == SOLID
 	and topmid != SOLID and midleft != SOLID) 
 		slice = G_9SLICE_TOPLEFT;
 	
 else if (midleft == SOLID and midright == SOLID
-	and topmid != SOLID) 
+	and topmid != SOLID
+	and botmid == SOLID) 
 		slice = G_9SLICE_TOPMID;
 	
 else if (botmid == SOLID and midleft == SOLID
@@ -71,14 +79,15 @@ else if (topmid == SOLID and midright == SOLID
 		slice = G_9SLICE_BOTTOMLEFT;
 
 else if (midleft == SOLID and midright == SOLID
-	and botmid != SOLID)  
+	and botmid != SOLID
+	and topmid == SOLID)  
 		slice = G_9SLICE_BOTTOMMID;
 	
 else if (topmid == SOLID and midleft == SOLID
 	and botmid != SOLID and midright != SOLID)  
 		slice = G_9SLICE_BOTTOMRIGHT;
 		
-//Inside
+//Inside corners
 else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
 	and topright != SOLID)
 		slice = G_9SLICE_INSIDE_BOTTOMLEFT
@@ -94,10 +103,54 @@ else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright =
 else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
 	and botright != SOLID)
 		slice = G_9SLICE_INSIDE_TOPLEFT
+		
+//Hangers
+else if (botright != SOLID and botleft != SOLID and midright != SOLID and midleft != SOLID
+		and center == SOLID and topmid == SOLID)
+		slice = G_9SLICE_TOPHANGER
+		
+else if (topright != SOLID and topleft != SOLID and midright != SOLID and midleft != SOLID
+		and center == SOLID and botmid == SOLID)
+		slice = G_9SLICE_BOTTOMUPJUT
+
+//Platform
+else if (topleft != SOLID and topmid != SOLID and topright != SOLID
+		and midleft == SOLID and center == SOLID and midright == SOLID
+		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+		slice = G_PLATFORM_MID
+		
+else if (topleft != SOLID and topmid != SOLID and topright != SOLID
+		and midleft == SOLID and center == SOLID and midright != SOLID
+		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+		slice = G_PLATFORM_RIGHT
+		
+else if (topleft != SOLID and topmid != SOLID and topright != SOLID
+		and midleft != SOLID and center == SOLID and midright == SOLID
+		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+		slice = G_PLATFORM_LEFT
+		
+else if (midright == SOLID
+		and topright != SOLID and botright != SOLID)
+		slice = G_PLATFORM_WALLRIGHT
+		
+else if (midleft == SOLID
+		and topleft != SOLID and botleft != SOLID)
+		slice = G_PLATFORM_WALLLEFT
+
+else if (topleft != SOLID and topmid != SOLID and topright != SOLID
+		and midleft != SOLID and center == SOLID and midright != SOLID
+		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+		slice = G_9SLICE_SINGLEISLAND
+
 
 //center
 else if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID)  
 	slice = G_9SLICE_CENTER;
+	
+else 
+	slice = G_9SLICE_UNKNOWN;
+
+	
 
 
 if (debug) {

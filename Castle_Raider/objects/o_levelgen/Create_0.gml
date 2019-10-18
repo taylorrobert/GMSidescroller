@@ -2,8 +2,8 @@
 generated_tile_size = 16;
 tile_group_size = 48;
 side_buffer = 5;
-turn_chance = 50;
-total_area = 200;
+turn_chance = 90;
+total_area = 300;
 
 for (i = 0; i < room_width div generated_tile_size; i++) {
 	for (var j = 0; j < room_height div generated_tile_size; j++) {		
@@ -14,20 +14,28 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 
 var dir = 0;
 var carved = 0;
+var previousDir = dir;
+var downCount = 0;
 
 while (carved < total_area) {
-	if (chance(turn_chance)) {		
-		dir = choose(0, 1, 2, 3) * 90;
+	if (downCount > 5) {
+		dir = choose(0, 2) * 90;
+		downCount = 0;
 	}
+	else if (chance(turn_chance)) {				
+		dir = choose(0, 1, 2, 3) * 90;					
+	}
+	
+	if (dir == 90 || dir == 270) downCount++;
+	
+	
 	
 	var object = instance_place(x, y, o_wall);
 	
 	if (object) {
 		
 		for (var i = 0; i < tile_group_size; i += generated_tile_size) {
-			//if (random(100) < 5)				continue;
 			for (var j = 0; j < tile_group_size; j += generated_tile_size) {
-				//if (random(100) < 5) continue;
 				instance_destroy(instance_place(x + generated_tile_size * (i div generated_tile_size), y + generated_tile_size * (j div generated_tile_size), o_wall));	
 			}
 		}
@@ -78,29 +86,15 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 			lay_id = layer_get_id("NineSliceTest");
 			map_id = layer_tilemap_get_id(lay_id);
 		
-			var nine = get9Slice(i, j, generated_tile_size, false)
+			var nine = get9Slice(i, j, generated_tile_size, false);		
+			instance_destroy(instance_place(i, j, o_wall));	
 			
-			//var prevX = i = 1;
-			//var prevY = j - 1;
-			
-			//var currentCellArray;
-			//currentCellArray[0] = nine;
-			//currentCellArray[1] = 
-			
-			//sequenceCounts[i,j] = nine;
-			
-			//var xSequenceCount, ySequenceCount = 0;
-			
-			//if (prevX < 0) xSequenceCount = 0;
-			//if (prevY < 0) YSequenceCount = 0;
-			
-			
-			
+			if (nine == G_9SLICE_SINGLEISLAND) continue;
 			
 			var tileId = tilesetMap_forest_cave(nine, 0);
 			
 			if (nine > -1) tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);		
-			instance_destroy(instance_place(i, j, o_wall));	
+			
 		}
 		
 		

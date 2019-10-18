@@ -34,17 +34,17 @@ while (carved < total_area) {
 	
 	if (object) {
 		
-		for (var i = 0; i < tile_group_size; i += generated_tile_size) {
-			for (var j = 0; j < tile_group_size; j += generated_tile_size) {
-				instance_destroy(instance_place(x + generated_tile_size * (i div generated_tile_size), y + generated_tile_size * (j div generated_tile_size), o_wall));	
+		for (var i = 0; i < tile_group_size div generated_tile_size; i++) {
+			for (var j = 0; j < tile_group_size div generated_tile_size; j++) {
+				instance_destroy(instance_place(x + (generated_tile_size * i), y + (generated_tile_size * j), o_wall));	
 			}
 		}
 		carved++;	
 	} 
 	
 	
-	x += lengthdir_x(tile_group_size, dir);
-	y += lengthdir_y(tile_group_size, dir);
+	x += lengthdir_x(generated_tile_size, dir);
+	y += lengthdir_y(generated_tile_size, dir);
 	
 	x = clamp(x, 0 + generated_tile_size * side_buffer, room_width - generated_tile_size * side_buffer - tile_group_size);
 	y = clamp(y, 0 + generated_tile_size * side_buffer, room_height - generated_tile_size * side_buffer - tile_group_size);
@@ -76,9 +76,9 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 
 
 //clean up unwanted structures, like islands
-for (i = 0; i < room_width div generated_tile_size; i++) {
-	for (var j = 0; j < room_height div generated_tile_size; j++) {
-		var object = instance_place(i * generated_tile_size, j * generated_tile_size, o_wall);
+for (i = 0; i < room_width; i += generated_tile_size) {	
+	for (var j = 0; j < room_height; j += generated_tile_size) {	
+		var object = instance_place(i, j, o_wall);
 		if (object != noone) {
 				
 			

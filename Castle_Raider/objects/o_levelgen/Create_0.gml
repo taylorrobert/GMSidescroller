@@ -67,11 +67,11 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 
 
 //fix into 9 slices
+var sequenceCounts;
 for (i = 0; i < room_width; i += generated_tile_size) {
-	for (var j = 0; j < room_height; j += generated_tile_size) {
-		//lay_id = layer_get_id("Collisions");
-		//map_id = layer_tilemap_get_id(lay_id);
-		//data = tilemap_get(map_id, 0, 0);	
+
+	
+	for (var j = 0; j < room_height; j += generated_tile_size) {	
 		
 		var object = instance_place(i, j, o_wall);
 		if (object != noone) {
@@ -80,9 +80,27 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 		
 			var nine = get9Slice(i, j, generated_tile_size, false)
 			
-			var tileId = nineSliceTileLocatorTest(nine);
+			//var prevX = i = 1;
+			//var prevY = j - 1;
 			
-			if (nine > -1) tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);
+			//var currentCellArray;
+			//currentCellArray[0] = nine;
+			//currentCellArray[1] = 
+			
+			//sequenceCounts[i,j] = nine;
+			
+			//var xSequenceCount, ySequenceCount = 0;
+			
+			//if (prevX < 0) xSequenceCount = 0;
+			//if (prevY < 0) YSequenceCount = 0;
+			
+			
+			
+			
+			var tileId = tilesetMap_forest_cave(nine, 0);
+			
+			if (nine > -1) tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);		
+			instance_destroy(instance_place(i, j, o_wall));	
 		}
 		
 		

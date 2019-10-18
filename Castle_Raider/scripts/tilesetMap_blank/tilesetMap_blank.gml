@@ -4,7 +4,7 @@ var slice = argument0;
 
 if (slice == G_9SLICE_TOPLEFT) return 4;
 if (slice == G_9SLICE_TOPMID) return 5;
-if (slice == G_9SLICE_TOPRIGHT) return 6;
+if (slice == G_9SLICE_TOPRIGHT) return 721;
 
 if (slice == G_9SLICE_MIDLEFT) return 8;
 if (slice == G_9SLICE_CENTER) return 9;

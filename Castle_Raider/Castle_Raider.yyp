@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "437e454d-bfae-4e0a-b523-0521557ade95",
+            "Value": {
+                "id": "1d34f6f8-ed51-4998-886c-201a77143865",
+                "resourcePath": "tilesets\\t_px_cave_tileset\\t_px_cave_tileset.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "45604916-b4e6-475a-94e9-e711e8a97e48",
             "Value": {
                 "id": "9ec500ca-8a5a-4e23-bd4f-2036ecebe43b",
@@ -1103,6 +1111,14 @@
             }
         },
         {
+            "Key": "852a782e-3f75-4cea-916d-fc87439e0691",
+            "Value": {
+                "id": "d22bfcd1-3eb2-4423-b530-d058715eb4be",
+                "resourcePath": "views\\852a782e-3f75-4cea-916d-fc87439e0691.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "85f7bc9e-c4fc-4dfa-b6db-ec309c6ab382",
             "Value": {
                 "id": "6ad6d5c3-1d26-4702-9d3b-39dca77af2bc",
@@ -1303,6 +1319,14 @@
             }
         },
         {
+            "Key": "9c00ab69-114a-4f9e-9d76-f3a3e9d9ed40",
+            "Value": {
+                "id": "f43b99dc-5ba4-4f87-bdcd-7868cf6df76d",
+                "resourcePath": "scripts\\tilesetMap_px_cave\\tilesetMap_px_cave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9c53fcbc-fc6c-49dd-9d59-1fab7ad42012",
             "Value": {
                 "id": "1dd5da37-8c20-4e82-aa4a-3c7f75ad4ed4",
@@ -1452,6 +1476,14 @@
                 "id": "6df6dfca-c123-477c-b79b-c23d614ac0eb",
                 "resourcePath": "scripts\\EaseInBack\\EaseInBack.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ade63aec-33b1-4b00-b320-a93de9e8e027",
+            "Value": {
+                "id": "ec768fd5-d680-4478-ab80-d8c9d9937639",
+                "resourcePath": "sprites\\ForestAndCave\\ForestAndCave.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1682,7 +1714,15 @@
             "Key": "c5e4c7e7-3acc-4957-9729-b367b426e4a4",
             "Value": {
                 "id": "8e0ee83a-c09b-4bfb-a262-8af3323f91a8",
-                "resourcePath": "scripts\\nineSliceTileLocatorTest\\nineSliceTileLocatorTest.yy",
+                "resourcePath": "scripts\\tilesetMap_blank\\tilesetMap_blank.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c7c41ee1-c964-47e9-a143-801339245518",
+            "Value": {
+                "id": "4561ed59-6c26-4c50-b104-bb1d22f0d65d",
+                "resourcePath": "scripts\\tilesetMap_forest_cave\\tilesetMap_forest_cave.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1708,6 +1748,14 @@
                 "id": "162e2863-6490-4949-81dc-9b7b3b2396ea",
                 "resourcePath": "objects\\o_arrow_spawner\\o_arrow_spawner.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "caa8f460-d3c9-4eb0-b376-a3a240a565f7",
+            "Value": {
+                "id": "51678d1a-fecb-4f73-a90a-c0bfb12111b9",
+                "resourcePath": "tilesets\\t_ForestAndCave\\t_ForestAndCave.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -1916,6 +1964,14 @@
                 "id": "28fb0662-9c00-4b57-8b0f-b72f3608447a",
                 "resourcePath": "scripts\\jumped\\jumped.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e1105c53-90a3-489f-82fd-afe1e26dd36b",
+            "Value": {
+                "id": "c201f624-89c3-49d1-9df6-c7b888e0aa53",
+                "resourcePath": "views\\e1105c53-90a3-489f-82fd-afe1e26dd36b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2272,6 +2328,8 @@
         "3f04e857-f66f-45e3-8e21-b70427b5946b",
         "ba75db76-bba2-4c3b-a682-be45798168ca",
         "c5e4c7e7-3acc-4957-9729-b367b426e4a4",
+        "9c00ab69-114a-4f9e-9d76-f3a3e9d9ed40",
+        "c7c41ee1-c964-47e9-a143-801339245518",
         "3a9fc21e-1c59-40cd-8937-f7ad8703c407"
     ],
     "tutorial": ""

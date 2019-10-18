@@ -62,9 +62,6 @@ else if (topmid == SOLID and botmid == SOLID
 	and midleft != SOLID)  
 		slice = G_9SLICE_MIDLEFT;
 
-else if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID)  
-		slice = G_9SLICE_CENTER;
-
 else if (topmid == SOLID and botmid == SOLID
 	and midright != SOLID) 
 		slice = G_9SLICE_MIDRIGHT;
@@ -80,6 +77,27 @@ else if (midleft == SOLID and midright == SOLID
 else if (topmid == SOLID and midleft == SOLID
 	and botmid != SOLID and midright != SOLID)  
 		slice = G_9SLICE_BOTTOMRIGHT;
+		
+//Inside
+else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
+	and topright != SOLID)
+		slice = G_9SLICE_INSIDE_BOTTOMLEFT
+		
+else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
+	and topleft != SOLID)
+		slice = G_9SLICE_INSIDE_BOTTOMRIGHT
+		
+else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
+	and botleft != SOLID)
+		slice = G_9SLICE_INSIDE_TOPRIGHT
+	
+else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
+	and botright != SOLID)
+		slice = G_9SLICE_INSIDE_TOPLEFT
+
+//center
+else if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID)  
+	slice = G_9SLICE_CENTER;
 
 
 if (debug) {

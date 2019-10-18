@@ -88,7 +88,7 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 		
 			var nine = get9Slice(i, j, generated_tile_size, false);		
 			
-			if (nine == G_9SLICE_SINGLEISLAND) 			
+			if (nine == G_9SLICE_SINGLEISLAND || nine == G_9SLICE_TOPHANGER || nine == G_9SLICE_BOTTOMUPJUT) 			
 			{
 				//Remove tiles
 				var tile = tilemap_get_at_pixel(map_id, i, j);
@@ -108,16 +108,12 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 
 
 //fix into 9 slices
-var sequenceCounts;
-for (i = 0; i < room_width; i += generated_tile_size) {
-
-	
+for (i = 0; i < room_width; i += generated_tile_size) {	
 	for (var j = 0; j < room_height; j += generated_tile_size) {	
 		
 		var object = instance_place(i, j, o_wall);
 		if (object != noone) {
-			lay_id = layer_get_id("NineSliceTest");
-			map_id = layer_tilemap_get_id(lay_id);
+			
 		
 			var nine = get9Slice(i, j, generated_tile_size, false);		
 			instance_destroy(instance_place(i, j, o_wall));	
@@ -127,7 +123,28 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 			
 			var tileId = tilesetMap_forest_cave(nine, 0);
 			
-			if (nine > -1) tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);		
+			var lay_id;
+			var map_id;	
+			
+			
+			if (nine <= -1) continue; 
+			
+			if (nine == G_PLATFORM_LEFT || nine == G_PLATFORM_MID || nine == G_PLATFORM_RIGHT
+					|| G_PLATFORM_WALLLEFT || G_PLATFORM_WALLRIGHT) 
+			{
+					
+				//Create platforms out of single-width blocks		
+				lay_id = layer_get_id("Platforms");
+				map_id = layer_tilemap_get_id(lay_id);		
+			}
+			else {
+				lay_id = layer_get_id("NineSliceTest");
+				map_id = layer_tilemap_get_id(lay_id);	
+			}
+			
+			tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);	
+			
+			
 			
 		}
 		

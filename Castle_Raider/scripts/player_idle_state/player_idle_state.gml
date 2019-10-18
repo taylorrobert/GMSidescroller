@@ -18,6 +18,11 @@ if (jump) {
 	jumped();	
 }
 
+if (!jump and down) {
+	state = states.crouch;
+	image_index = 0;
+}
+
 if (block) {	
 	if (down) state = states.crouch_block;
 	else state = states.block;

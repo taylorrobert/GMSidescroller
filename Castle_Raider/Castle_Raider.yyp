@@ -1807,6 +1807,14 @@
             }
         },
         {
+            "Key": "cfbf1cf4-e2d5-4585-b193-088eee4c9ca8",
+            "Value": {
+                "id": "6af52d7b-5dc2-4942-9afd-4f5887b61c28",
+                "resourcePath": "sprites\\s_warped_player_stand_shoot\\s_warped_player_stand_shoot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d0c3ae5e-e0ef-4f34-a2ef-f0cc12a04249",
             "Value": {
                 "id": "f1c1f620-51af-4e37-abe1-b1360db7632a",

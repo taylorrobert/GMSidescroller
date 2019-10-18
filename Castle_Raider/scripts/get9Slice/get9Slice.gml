@@ -53,7 +53,7 @@ if (topleft != SOLID and topmid != SOLID and topright != SOLID
 	slice = G_9SLICE_NONE
 
 //structural
-if (botmid == SOLID and midright == SOLID
+else if (botmid == SOLID and midright == SOLID
 	and topmid != SOLID and midleft != SOLID) 
 		slice = G_9SLICE_TOPLEFT;
 	

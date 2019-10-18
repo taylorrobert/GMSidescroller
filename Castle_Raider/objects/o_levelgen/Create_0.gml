@@ -118,29 +118,26 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 			var nine = get9Slice(i, j, generated_tile_size, false);		
 			instance_destroy(instance_place(i, j, o_wall));	
 			
-			if (nine == G_9SLICE_SINGLEISLAND) 
-				continue;
-			
-			var tileId = tilesetMap_forest_cave(nine, 0);
 			
 			var lay_id;
 			var map_id;	
 			
 			
-			if (nine <= -1) continue; 
+			//if (nine <= -1) continue; 
 			
 			if (nine == G_PLATFORM_LEFT || nine == G_PLATFORM_MID || nine == G_PLATFORM_RIGHT
-					|| G_PLATFORM_WALLLEFT || G_PLATFORM_WALLRIGHT) 
+					|| nine == G_PLATFORM_WALLLEFT || nine == G_PLATFORM_WALLRIGHT) 
 			{
 					
 				//Create platforms out of single-width blocks		
-				lay_id = layer_get_id("Platforms");
+				lay_id = layer_get_id("Collisions");
 				map_id = layer_tilemap_get_id(lay_id);		
+				tilemap_set(map_id, PLATFORM, i div generated_tile_size, j div generated_tile_size);	
 			}
-			else {
-				lay_id = layer_get_id("NineSliceTest");
-				map_id = layer_tilemap_get_id(lay_id);	
-			}
+			
+			var tileId = tilesetMap_forest_cave(nine, 0);
+			lay_id = layer_get_id("NineSliceTest");
+			map_id = layer_tilemap_get_id(lay_id);				
 			
 			tilemap_set(map_id, tileId, i div generated_tile_size, j div generated_tile_size);	
 			

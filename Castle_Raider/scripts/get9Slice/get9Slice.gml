@@ -137,9 +137,7 @@ else if (midleft == SOLID
 		and topleft != SOLID and botleft != SOLID)
 		slice = G_PLATFORM_WALLLEFT
 
-else if (topleft != SOLID and topmid != SOLID and topright != SOLID
-		and midleft != SOLID and center == SOLID and midright != SOLID
-		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+else if (topmid != SOLID and midleft != SOLID and center == SOLID and midright != SOLID	and botmid != SOLID)
 		slice = G_9SLICE_SINGLEISLAND
 
 

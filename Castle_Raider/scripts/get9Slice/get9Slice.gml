@@ -47,102 +47,102 @@ var botright	= map[2,2];
 var slice = G_9SLICE_UNKNOWN;
 
 //none
-if (topleft != SOLID and topmid != SOLID and topright != SOLID
-	and midleft != SOLID and center != SOLID and midright != SOLID 
-	and botright != SOLID and botmid != SOLID and botright != SOLID)
+if (!isSolid(topleft) and !isSolid(topmid) and !isSolid(topright)
+	and !isSolid(midleft) and !isSolid(center) and !isSolid(midright)
+	and !isSolid(botright) and !isSolid(botmid) and !isSolid(botright))
 	slice = G_9SLICE_NONE
 
 //structural
-else if (botmid == SOLID and midright == SOLID
-	and topmid != SOLID and midleft != SOLID) 
+else if (isSolid(botmid) and isSolid(midright)
+	and !isSolid(topmid) and !isSolid(midleft)) 
 		slice = G_9SLICE_TOPLEFT;
 	
-else if (midleft == SOLID and midright == SOLID
-	and topmid != SOLID
-	and botmid == SOLID) 
+else if (isSolid(midleft) and isSolid(midright)
+	and !isSolid(topmid)
+	and isSolid(botmid)) 
 		slice = G_9SLICE_TOPMID;
 	
-else if (botmid == SOLID and midleft == SOLID
-	and topmid != SOLID and midright != SOLID)  
+else if (isSolid(botmid) and isSolid(midleft)
+	and !isSolid(topmid) and !isSolid(midright))  
 		slice = G_9SLICE_TOPRIGHT;
 
-else if (topmid == SOLID and botmid == SOLID
-	and midleft != SOLID)  
+else if (isSolid(topmid) and isSolid(botmid)
+	and !isSolid(midleft))  
 		slice = G_9SLICE_MIDLEFT;
 
-else if (topmid == SOLID and botmid == SOLID
-	and midright != SOLID) 
+else if (isSolid(topmid) and isSolid(botmid)
+	and !isSolid(midright)) 
 		slice = G_9SLICE_MIDRIGHT;
 
-else if (topmid == SOLID and midright == SOLID
-	and midleft != SOLID and botmid != SOLID)  
+else if (isSolid(topmid) and isSolid(midright)
+	and !isSolid(midleft) and !isSolid(botmid))  
 		slice = G_9SLICE_BOTTOMLEFT;
 
-else if (midleft == SOLID and midright == SOLID
-	and botmid != SOLID
-	and topmid == SOLID)  
+else if (isSolid(midleft) and isSolid(midright)
+	and !isSolid(botmid)
+	and isSolid(topmid))  
 		slice = G_9SLICE_BOTTOMMID;
 	
-else if (topmid == SOLID and midleft == SOLID
-	and botmid != SOLID and midright != SOLID)  
+else if (isSolid(topmid) and isSolid(midleft)
+	and !isSolid(botmid) and !isSolid(midright))  
 		slice = G_9SLICE_BOTTOMRIGHT;
 		
 //Inside corners
-else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
-	and topright != SOLID)
+else if (isSolid(topmid) and isSolid(midleft) and isSolid(botmid) and isSolid(midright)
+	and !isSolid(topright))
 		slice = G_9SLICE_INSIDE_BOTTOMLEFT
 		
-else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
-	and topleft != SOLID)
+else if (isSolid(topmid) and isSolid(midleft) and isSolid(botmid) and isSolid(midright)
+	and !isSolid(topleft))
 		slice = G_9SLICE_INSIDE_BOTTOMRIGHT
 		
-else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
-	and botleft != SOLID)
+else if (isSolid(topmid) and isSolid(midleft) and isSolid(botmid) and isSolid(midright)
+	and !isSolid(botleft))
 		slice = G_9SLICE_INSIDE_TOPRIGHT
 	
-else if (topmid == SOLID and midleft == SOLID and botmid == SOLID and midright == SOLID
-	and botright != SOLID)
+else if (isSolid(topmid) and isSolid(midleft) and isSolid(botmid) and isSolid(midright)
+	and !isSolid(botright))
 		slice = G_9SLICE_INSIDE_TOPLEFT
 		
 //Hangers
-else if (botright != SOLID and botleft != SOLID and midright != SOLID and midleft != SOLID
-		and center == SOLID and topmid == SOLID)
+else if (!isSolid(botright) and !isSolid(botleft) and !isSolid(midright) and !isSolid(midleft)
+		and isSolid(center) and isSolid(topmid))
 		slice = G_9SLICE_TOPHANGER
 		
-else if (topright != SOLID and topleft != SOLID and midright != SOLID and midleft != SOLID
-		and center == SOLID and botmid == SOLID)
+else if (!isSolid(topright) and !isSolid(topleft) and !isSolid(midright) and !isSolid(midleft)
+		and isSolid(center) and isSolid(botmid))
 		slice = G_9SLICE_BOTTOMUPJUT
 
 //Platform
-else if (topleft != SOLID and topmid != SOLID and topright != SOLID
-		and midleft == SOLID and center == SOLID and midright == SOLID
-		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+else if (!isSolid(topleft) and !isSolid(topmid) and !isSolid(topright)
+		and isSolid(midleft) and isSolid(center) and isSolid(midright)
+		and !isSolid(botleft) and !isSolid(botmid) and !isSolid(botright))
 		slice = G_PLATFORM_MID
 		
-else if (topleft != SOLID and topmid != SOLID and topright != SOLID
-		and midleft == SOLID and center == SOLID and midright != SOLID
-		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+else if (!isSolid(topleft) and !isSolid(topmid) and !isSolid(topright)
+		and isSolid(midleft) and isSolid(center) and !isSolid(midright)
+		and !isSolid(botleft) and !isSolid(botmid) and !isSolid(botright))
 		slice = G_PLATFORM_RIGHT
 		
-else if (topleft != SOLID and topmid != SOLID and topright != SOLID
-		and midleft != SOLID and center == SOLID and midright == SOLID
-		and botleft != SOLID and botmid != SOLID and botright != SOLID)
+else if (!isSolid(topleft) and !isSolid(topmid) and !isSolid(topright)
+		and !isSolid(midleft) and isSolid(center) and isSolid(midright)
+		and !isSolid(botleft) and !isSolid(botmid) and !isSolid(botright))
 		slice = G_PLATFORM_LEFT
 		
-else if (midright == SOLID
-		and topright != SOLID and botright != SOLID)
+else if (isSolid(midright)
+		and !isSolid(topright) and !isSolid(botright))
 		slice = G_PLATFORM_WALLRIGHT
 		
-else if (midleft == SOLID
-		and topleft != SOLID and botleft != SOLID)
+else if (isSolid(midleft)
+		and !isSolid(topleft) and !isSolid(botleft))
 		slice = G_PLATFORM_WALLLEFT
 
-else if (topmid != SOLID and midleft != SOLID and center == SOLID and midright != SOLID	and botmid != SOLID)
+else if (!isSolid(topmid) and !isSolid(midleft) and isSolid(center) and !isSolid(midright)	and !isSolid(botmid))
 		slice = G_9SLICE_SINGLEISLAND
 
 
 //center
-else if (topmid == SOLID and midright == SOLID and midleft == SOLID and botmid == SOLID)  
+else if (isSolid(topmid) and isSolid(midright) and isSolid(midleft) and isSolid(botmid))  
 	slice = G_9SLICE_CENTER;
 	
 else 

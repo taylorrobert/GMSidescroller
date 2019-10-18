@@ -7,7 +7,7 @@ max_hsp = 2;
 walk_spd = 1.5;
 jump_spd = -7;
 jump_dampener = 2.5;
-jumps_initial = 2;
+jumps_initial = 6;
 jumps = jumps_initial;
 
 hsp_decimal = 0;

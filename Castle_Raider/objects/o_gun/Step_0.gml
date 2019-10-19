@@ -16,10 +16,10 @@ else {
 }
 
 if (o_player.attack) {
-	object_set_visible(object_index, true);
+	visible = true;
 	image_speed = 1;
 }
 else {
-	object_set_visible(object_index, false);
-	image_speed = 0
+	object_set_visible(o_gun, false);
+	visible = false;
 }

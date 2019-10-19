@@ -183,11 +183,32 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 }
 
 
-//Clean up unwanted structures
-
-
-
-//go through in 4x4 squares and place platforms to get up and down if there are no vertical surfaces
-
-
-//map 
+//Place enemies
+for (i = 0; i < room_width; i += generated_tile_size) {	
+	for (var j = 0; j < room_height; j += generated_tile_size) {	
+		var canPlace = true;
+		
+		//check the group to see if there is an enemy already, or if it is not all solid
+		for (var k = 0; k < 2 * generated_tile_size; k += generated_tile_size) {
+			for (l = 0; l < 2 * generated_tile_size; l += generated_tile_size) {
+				
+				lay_id = layer_get_id("Collisions");
+				map_id = layer_tilemap_get_id(lay_id);
+				tile = tilemap_get_at_pixel(map_id, i + k, j + l);
+				
+				var inst = instance_place(i + k, j + l, o_enemy_parent);
+				
+				if (tile != VOID || inst > 0) {
+					canPlace = false;
+					break;
+				}	
+				
+			}
+			
+			if (!canPlace) break;
+		}
+		
+		if (canPlace and random(1000) < 5) 
+			instance_create_layer(i + generated_tile_size, j + generated_tile_size, "Enemies", o_bug);
+	}
+}

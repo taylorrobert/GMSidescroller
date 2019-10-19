@@ -8,13 +8,13 @@ getInput();
 calcMovement();
 
 //check state - this code is to end the attack after one animation cycle
-//if (image_index >= image_number - sprite_get_speed(sprite_index)/room_speed) {
-//	if (!onGround()) state = states.jump;	
-//	else  {				
-//		if (hsp != 0) state = states.walk;
-//		else state = states.idle;		
-//	}
-//}
+if (!attack) {
+	if (!onGround()) state = states.jump;	
+	else  {				
+		if (hsp != 0) state = states.walk;
+		else state = states.idle;		
+	}
+}
 
 if (jump) {
 	jumped();
@@ -27,8 +27,6 @@ if (jump) {
 //	inst.image_xscale = facing;
 //}
 
-if (onGround() and up) hsp = 0;
-
 //enable smaller jumps
 if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 
@@ -39,8 +37,7 @@ if (attack and can_shoot) {
 	var inst = instance_create_layer(x, y - 35, "PlayerShots", o_basicShot);
 	var dir = point_direction(inst.x, inst.y,mouse_x,mouse_y)
 	inst.hsp = lengthdir_x(inst.spd, dir);
-	inst.vsp = lengthdir_y(inst.spd, dir); 
-	
+	inst.vsp = lengthdir_y(inst.spd, dir); 	
 	 
 	//var xpos = 0;
 	//var ypos = 0;
@@ -108,9 +105,12 @@ if (attack and can_shoot) {
 	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
 	//	inst.hsp = 5 * facing;		
 	//}
-	alarm[PLAYERSHOTTIMER] = shot_delay;
-	
+	alarm[PLAYERSHOTTIMER] = shot_delay;	
 }
+
+//if (!attack and image_index >= image_number	- sprite_get_speed(sprite_index)/room_speed) {
+//	state = states.idle;
+//}
 
 //apply movement
 collision();

@@ -27,6 +27,8 @@ scale_decay = 0.2;
 
 //facing direction
 facing = 1;
+movingDir = 1;
+mouseDir = 1;
 
 //gems
 gems = 0;

@@ -3,6 +3,8 @@
 //get input
 getInput();
 
+facing = mouseDir;
+
 //calculate movement
 calcMovement();
 

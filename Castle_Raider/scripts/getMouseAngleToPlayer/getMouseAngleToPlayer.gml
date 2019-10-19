@@ -1,4 +1,7 @@
 with (o_player) {
-	var dir = point_direction(x,y,mouse_x,mouse_y)	
-	return dir;
+	var w = camera_get_view_width(o_camera) / 2;
+	if (window_mouse_get_x() > w)
+		return 1;
+	else
+		return -1;
 }

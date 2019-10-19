@@ -1,6 +1,5 @@
 /// calcMovement();
 
-
 var hdelta = (right - left) * walk_spd;
 var vdelta = global.grav;
 
@@ -41,11 +40,18 @@ hsp = lerp(hsp, 0, drag);
 //stop
 if (abs(hsp) <= 0.1) hsp = 0
 
+//set facing to mouse direction
+mouseDir = getMouseAngleToPlayer();
+
 //face correct way
-if (hsp != 0) facing = sign(hsp);
+if (hsp != 0) movingDir = sign(hsp);
+if (state != states.attack) 
+	facing = movingDir;
+else 
+	facing = mouseDir;
 
 //imit speed
-hsp = min(abs(hsp), max_hsp) * facing;
+hsp = min(abs(hsp), max_hsp) * movingDir;
 
 //stop stretch
 scale_x = lerp(scale_x, 1, scale_decay);

@@ -25,7 +25,7 @@ if (o_player.hp > 0 and !hurt) {
 				
 		//move player away
 		var knockback_distance = hk;
-		hsp = -facing * knockback_distance;
+		hsp = -movingDir * knockback_distance;
 			
 		//damage enemy
 		hp -= 1;

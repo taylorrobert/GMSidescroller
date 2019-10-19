@@ -22,13 +22,26 @@ switch (state) {
 		if (!attack) {
 			if (!onGround()) sprite_index = s_warped_player_jump;
 			else if (hsp != 0) sprite_index = s_warped_player_run;
-			else if (hsp == 0) sprite_index = s_warped_player_idle;
+			else if (hsp == 0) {
+				if (up) sprite_index = s_warped_player_shoot_up;
+				else sprite_index = s_warped_player_idle;
+			}
 			return;
 		}
 		
-		else if (!onGround()) sprite_index = s_warped_player_jump_shoot;
+		else if (!onGround()) {
+			if (up) {
+				sprite_index = s_warped_player_shoot_up;
+			}
+			else {
+				sprite_index = s_warped_player_jump_shoot;
+			}
+		}
 		else {
-			if (hsp != 0) {
+			if (up) {
+				sprite_index = s_warped_player_shoot_up;
+			}
+			else if (hsp != 0) {
 				sprite_index = s_warped_player_run_shoot;		
 			}
 			else {
@@ -56,7 +69,12 @@ switch (state) {
 		}
 	break;
 	case states.idle:
-		sprite_index = s_warped_player_idle;
+		if (up) {
+			sprite_index = s_warped_player_shoot_up;	
+		}
+		else {			
+			sprite_index = s_warped_player_idle;			
+		}
 		image_speed = 1;
 	break;
 }

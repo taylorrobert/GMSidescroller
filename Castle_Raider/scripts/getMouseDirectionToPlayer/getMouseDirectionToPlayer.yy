@@ -1,8 +1,8 @@
 {
-    "id": "5b952527-ded0-4c4f-892c-9ab75f1e11c7",
+    "id": "2ce23c95-020b-41ab-8c40-36a930fde6bb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "getMouseAngleToPlayer",
+    "name": "getMouseDirectionToPlayer",
     "IsCompatibility": false,
     "IsDnD": false
 }

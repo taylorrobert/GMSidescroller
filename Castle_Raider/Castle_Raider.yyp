@@ -370,7 +370,7 @@
             "Key": "2ce23c95-020b-41ab-8c40-36a930fde6bb",
             "Value": {
                 "id": "26cf90bb-c1e9-4827-a2a2-15693ddce71d",
-                "resourcePath": "scripts\\getMouseAngleToPlayer\\getMouseAngleToPlayer.yy",
+                "resourcePath": "scripts\\getMouseDirectionToPlayer\\getMouseDirectionToPlayer.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -791,6 +791,14 @@
             }
         },
         {
+            "Key": "5b952527-ded0-4c4f-892c-9ab75f1e11c7",
+            "Value": {
+                "id": "062e4b4c-c2ad-40ea-9b84-3a36e256f475",
+                "resourcePath": "scripts\\getMouseAngleToPlayer\\getMouseAngleToPlayer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5cae23fb-9c03-42a6-a229-12d0c0c4206a",
             "Value": {
                 "id": "849c48e6-1a75-44b8-a163-8402b9863ed0",
@@ -927,6 +935,14 @@
             }
         },
         {
+            "Key": "6c55b083-f66e-4228-ae6b-332612d453fe",
+            "Value": {
+                "id": "ada05519-4fd3-4222-bcb1-9cdd7fc86b4a",
+                "resourcePath": "views\\6c55b083-f66e-4228-ae6b-332612d453fe.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6cb60fe4-3125-4662-adec-84d77ee6cddb",
             "Value": {
                 "id": "2d48f09f-0959-43ec-907b-762066530671",
@@ -964,6 +980,14 @@
                 "id": "0bba0f48-b072-4d6d-ad5b-263e22699477",
                 "resourcePath": "objects\\o_enemy_parent\\o_enemy_parent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6f0eff74-5c88-466c-bef5-8f73e5e37ac6",
+            "Value": {
+                "id": "eac02737-ebfc-4f94-83f7-aed0860c1248",
+                "resourcePath": "sprites\\s_warped_gun\\s_warped_gun.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1220,6 +1244,14 @@
                 "id": "6ad6d5c3-1d26-4702-9d3b-39dca77af2bc",
                 "resourcePath": "views\\85f7bc9e-c4fc-4dfa-b6db-ec309c6ab382.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8615dc0f-7db4-48c6-81fc-af231c4ccbf9",
+            "Value": {
+                "id": "8bc26b87-ddd6-41a3-8620-fb63b3669480",
+                "resourcePath": "sprites\\s_warped_player_stand_shoot_wip\\s_warped_player_stand_shoot_wip.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2079,6 +2111,14 @@
             }
         },
         {
+            "Key": "e02b09dd-7e50-4d49-b584-db28a3a7d2b4",
+            "Value": {
+                "id": "72c34994-b4d3-468c-8d71-dea2f09de7d2",
+                "resourcePath": "objects\\o_gun\\o_gun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e0ea7760-6cbb-4240-8e14-21b5af201c26",
             "Value": {
                 "id": "28fb0662-9c00-4b57-8b0f-b72f3608447a",
@@ -2452,7 +2492,8 @@
         "c7c41ee1-c964-47e9-a143-801339245518",
         "d82791af-f95e-42f2-ba57-6bacdc1987c8",
         "3a9fc21e-1c59-40cd-8937-f7ad8703c407",
-        "2ce23c95-020b-41ab-8c40-36a930fde6bb"
+        "2ce23c95-020b-41ab-8c40-36a930fde6bb",
+        "5b952527-ded0-4c4f-892c-9ab75f1e11c7"
     ],
     "tutorial": ""
 }

@@ -41,7 +41,7 @@ hsp = lerp(hsp, 0, drag);
 if (abs(hsp) <= 0.1) hsp = 0
 
 //set facing to mouse direction
-mouseDir = getMouseAngleToPlayer();
+mouseDir = getMouseDirectionToPlayer();
 
 //face correct way
 if (hsp != 0) movingDir = sign(hsp);

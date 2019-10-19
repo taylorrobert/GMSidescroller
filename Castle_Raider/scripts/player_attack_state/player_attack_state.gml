@@ -33,9 +33,10 @@ if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 if (attack and can_shoot) {
 	can_shoot = false;
 	
+	var angle = 0;
+	if (facing < 0) angle += 180;
 	
-	
-	var inst = instance_create_layer(o_gun.x+ lengthdir_x(15, o_gun.image_angle), o_gun.y + lengthdir_y(15, o_gun.image_angle), "PlayerShots", o_basicShot);
+	var inst = instance_create_layer(o_gun.x+ lengthdir_x(15, angle), o_gun.y + lengthdir_y(15, angle), "PlayerShots", o_basicShot);
 	var dir = point_direction(inst.x, inst.y,mouse_x,mouse_y)
 	inst.hsp = lengthdir_x(inst.spd, dir);
 	inst.vsp = lengthdir_y(inst.spd, dir); 	

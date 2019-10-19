@@ -31,11 +31,7 @@ switch (state) {
 				sprite_index = s_warped_player_stand_shoot;
 			}			
 		}
-		
-		if (attack) {
-			facing = getMouseAngleToPlayer();
 
-}
 	break;
 	case states.hurting:
 		if (!onGround()) {

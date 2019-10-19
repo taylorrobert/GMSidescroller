@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "093bb624-8037-45ed-8d57-94dd70e89313",
+            "Value": {
+                "id": "2e85f342-7f23-489e-ab4d-ec38714cac66",
+                "resourcePath": "sprites\\s_warped_player_run_shoot_wip\\s_warped_player_run_shoot_wip.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09fc2cb3-8d39-4e45-a268-142c6af18e5d",
             "Value": {
                 "id": "2c7a524b-40c5-49a4-88b2-9c47dd387f1d",

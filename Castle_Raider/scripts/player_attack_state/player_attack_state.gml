@@ -35,32 +35,79 @@ if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 if (attack and can_shoot) {
 	can_shoot = false;
 	
-	var xpos = 0;
-	var ypos = 0;
-	if (up) {
-		if (sign(facing)) {
-			xpos = x+1;
-			ypos = y-42;
-		}
-		else {
-			xpos = x-7;
-			ypos = y-42;
-		}
-		var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-		inst.vsp = -5;	
-	}
-	else {
-		if (sign(facing)) {
-			xpos = x + 12;
-			ypos = y - 28;
-		}
-		else {
-			xpos = x - 18;
-			ypos = y - 28;
-		}
-		var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-		inst.hsp = 5 * facing;		
-	}
+	
+	var inst = instance_create_layer(x, y - 35, "PlayerShots", o_basicShot);
+	var dir = point_direction(inst.x, inst.y,mouse_x,mouse_y)
+	inst.hsp = lengthdir_x(inst.spd, dir);
+	inst.vsp = lengthdir_y(inst.spd, dir); 
+	
+	 
+	//var xpos = 0;
+	//var ypos = 0;
+	//if (up and !right and !left) {
+	//	if (sign(facing)) {
+	//		xpos = x+1;
+	//		ypos = y-42;
+	//	}
+	//	else {
+	//		xpos = x-7;
+	//		ypos = y-42;
+	//	}
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = -5;	
+	//}
+	//else if (down and !right and !left) {
+	//	if (sign(facing)) {
+	//		xpos = x;
+	//		ypos = y;
+	//	}
+	//	else {
+	//		xpos = x;
+	//		ypos = y;
+	//	}
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = 5;	
+	//}
+	//else if (up and right) {
+	//	xpos = x + 12;
+	//	ypos = y - 40;
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = -5;
+	//	inst.hsp = 5;
+	//}
+	//else if (up and left) {
+	//	xpos = x - 12;
+	//	ypos = y - 40;
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = -5;
+	//	inst.hsp = -5;
+	//}
+	//else if (down and left) {
+	//	xpos = x - 12;
+	//	ypos = y - 4;
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = 5;
+	//	inst.hsp = -5;
+	//}
+	//else if (down and right) {
+	//	xpos = x + 12;
+	//	ypos = y - 4;
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.vsp = 5;
+	//	inst.hsp = 5;
+	//}
+	//else { //just left and just right
+	//	if (sign(facing)) {
+	//		xpos = x + 12;
+	//		ypos = y - 28;
+	//	}
+	//	else {
+	//		xpos = x - 18;
+	//		ypos = y - 28;
+	//	}
+	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
+	//	inst.hsp = 5 * facing;		
+	//}
 	alarm[PLAYERSHOTTIMER] = shot_delay;
 	
 }

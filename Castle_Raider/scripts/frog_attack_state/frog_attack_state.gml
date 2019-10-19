@@ -25,7 +25,7 @@ if (image_index == 2 and !inhale) {
 if (attack) {
 	if (image_index >= 5 and image_index <= 6) {
 		//create hitbox
-		var inst = instance_create_layer(x, y, "Enemy", o_frog_attack_hitbox);
+		var inst = instance_create_layer(x, y, "Enemies", o_frog_attack_hitbox);
 		//ensure hitbox faces the way the frog faces
 		inst.image_xscale = facing;
 	}
@@ -35,7 +35,7 @@ if (attack) {
 	if (image_index >= image_number	- sprite_get_speed(sprite_index)/room_speed) {
 		state = frog_states.idle;
 		alarm[CAN_ATTACK] = attack_delay;
-		depth = layer_get_depth(layer_get_id("Enemy"));
+		depth = layer_get_depth(layer_get_id("Enemies"));
 		inhale = false;
 		attack = false;
 	}

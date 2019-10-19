@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "2ce23c95-020b-41ab-8c40-36a930fde6bb",
+            "Value": {
+                "id": "26cf90bb-c1e9-4827-a2a2-15693ddce71d",
+                "resourcePath": "scripts\\getMouseAngleToPlayer\\getMouseAngleToPlayer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2cef8f35-dd3b-4cf8-85b6-24b92bdf6789",
             "Value": {
                 "id": "1f1c69d5-3774-4c59-811f-ad5a3eb4f59e",
@@ -2451,7 +2459,8 @@
         "9c00ab69-114a-4f9e-9d76-f3a3e9d9ed40",
         "c7c41ee1-c964-47e9-a143-801339245518",
         "d82791af-f95e-42f2-ba57-6bacdc1987c8",
-        "3a9fc21e-1c59-40cd-8937-f7ad8703c407"
+        "3a9fc21e-1c59-40cd-8937-f7ad8703c407",
+        "2ce23c95-020b-41ab-8c40-36a930fde6bb"
     ],
     "tutorial": ""
 }

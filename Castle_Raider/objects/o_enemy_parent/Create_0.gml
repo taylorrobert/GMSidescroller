@@ -1,5 +1,5 @@
 hurt = false;
-hurt_time = room_speed * .75;
+hurt_time = room_speed * .3;
 hp = 2;
 flash_counter = 0;
 

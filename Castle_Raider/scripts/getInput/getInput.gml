@@ -4,11 +4,12 @@ left		= keyboard_check(vk_left) or keyboard_check(ord("A"));
 right		= keyboard_check(vk_right) or keyboard_check(ord("D"));
 up			= keyboard_check(vk_up) or keyboard_check(ord("W"));
 down		= keyboard_check(vk_down) or keyboard_check(ord("S"));
-attack		= keyboard_check(vk_shift);
+attack		= keyboard_check(vk_shift) || mouse_check_button(mb_left);
 jump		= keyboard_check_pressed(vk_space);
 jump_held	= keyboard_check(vk_space);
 block		= keyboard_check(ord("Z")) or keyboard_check(ord("C"));
 action		= keyboard_check(ord("E")) or keyboard_check(ord("X"));
+left_mouse	= mouse_check_button(mb_left);
 
 
 //controller input

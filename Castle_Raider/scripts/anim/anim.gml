@@ -9,9 +9,11 @@ switch (state) {
 		
 	break;
 	case states.attack:
-		
+		if (movingDir == facing) image_speed = 1;
+		else image_speed = -1;
 		//If the attack has ended, switch animation
 		if (!attack) {
+			image_speed = 1;
 			if (!onGround()) sprite_index = s_warped_player_jump;
 			else if (hsp != 0) sprite_index = s_warped_player_run;
 			else if (hsp == 0) sprite_index = s_warped_player_idle;

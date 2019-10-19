@@ -7,14 +7,14 @@ getInput();
 //calculate movement
 calcMovement();
 
-//check state
-if (image_index >= image_number - sprite_get_speed(sprite_index)/room_speed) {
-	if (!onGround()) state = states.jump;	
-	else  {
-		if (hsp != 0) state = states.walk;
-		else state = states.idle;
-	}
-}
+//check state - this code is to end the attack after one animation cycle
+//if (image_index >= image_number - sprite_get_speed(sprite_index)/room_speed) {
+//	if (!onGround()) state = states.jump;	
+//	else  {				
+//		if (hsp != 0) state = states.walk;
+//		else state = states.idle;		
+//	}
+//}
 
 if (jump) {
 	jumped();

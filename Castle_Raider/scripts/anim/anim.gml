@@ -18,13 +18,21 @@ switch (state) {
 		//}
 	break;
 	case states.attack:
-		if (!onGround()) sprite_index = s_warped_player_run_shoot;
+		
+		if (!attack) {
+			if (!onGround()) sprite_index = s_warped_player_jump;
+			else if (hsp != 0) sprite_index = s_warped_player_run;
+			else if (hsp == 0) sprite_index = s_warped_player_idle;
+			return;
+		}
+		
+		else if (!onGround()) sprite_index = s_warped_player_jump_shoot;
 		else {
 			if (hsp != 0) {
 				sprite_index = s_warped_player_run_shoot;		
 			}
 			else {
-				sprite_index = s_warped_player_stand_shoot
+				sprite_index = s_warped_player_stand_shoot;
 			}
 			
 			

@@ -49,8 +49,40 @@ while (carved < total_area) {
 	x = clamp(x, 0 + generated_tile_size * side_buffer, room_width - generated_tile_size * side_buffer - tile_group_size);
 	y = clamp(y, 0 + generated_tile_size * side_buffer, room_height - generated_tile_size * side_buffer - tile_group_size);
 	
-	
 }
+
+//Make sure all passageways are navigable
+//for (i = side_buffer * generated_tile_size; i < room_width - side_buffer * generated_tile_size; i += generated_tile_size) {	
+//	for (var j = side_buffer * generated_tile_size; j < room_height - side_buffer * generated_tile_size; j += generated_tile_size) {	
+		
+//		var topHasSolid = instance_place(i - generated_tile_size, j, o_wall) > 0
+//							and instance_place(i, j, o_wall) > 0
+//							and instance_place(i + generated_tile_size, j, o_wall) > 0;
+							
+//		var bottomHasSolid = instance_place(i - generated_tile_size, j + generated_tile_size * 4, o_wall) > 0
+//								and instance_place(i, j + generated_tile_size * 4, o_wall) > 0
+//								and instance_place(i + generated_tile_size, j + generated_tile_size * 4, o_wall) > 0;
+								
+//		var mid1	= instance_place(i, j + generated_tile_size, o_wall);
+//				var mid2	= instance_place(i, j + generated_tile_size * 2, o_wall);
+//				var mid3	= instance_place(i, j + generated_tile_size * 3, o_wall);		
+								
+//		if (topHasSolid and bottomHasSolid and (mid1 < 0 || mid2 < 0 || mid3 < 0)) {
+			
+			
+//			for (var side = -1; side < 2; side++) {				
+//				var mid1	= instance_place(i + generated_tile_size * side, j + generated_tile_size, o_wall);
+//				var mid2	= instance_place(i + generated_tile_size * side, j + generated_tile_size * 2, o_wall);
+//				var mid3	= instance_place(i + generated_tile_size * side, j + generated_tile_size * 3, o_wall);				
+		
+//				instance_destroy(mid1);	
+//				instance_destroy(mid2);
+//				instance_destroy(mid3);
+//			}
+//		}
+		
+//	}
+//}
 
 //Add collision layer on top of walls
 for (i = 0; i < room_width div generated_tile_size; i++) {
@@ -75,6 +107,7 @@ for (i = 0; i < room_width div generated_tile_size; i++) {
 }
 
 
+
 //clean up unwanted structures, like islands
 for (i = 0; i < room_width; i += generated_tile_size) {	
 	for (var j = 0; j < room_height; j += generated_tile_size) {	
@@ -88,7 +121,7 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 		
 			var nine = get9Slice(i, j, generated_tile_size, false);		
 			
-			if (nine == G_9SLICE_SINGLEISLAND || nine == G_9SLICE_TOPHANGER || nine == G_9SLICE_BOTTOMUPJUT) 			
+			if (nine == G_9SLICE_SINGLEISLAND || nine == G_9SLICE_TOPHANGER || nine == G_9SLICE_BOTTOMUPJUT || nine == G_9SLICE_UNKNOWN) 			
 			{
 				//Remove tiles
 				var tile = tilemap_get_at_pixel(map_id, i, j);
@@ -123,7 +156,7 @@ for (i = 0; i < room_width; i += generated_tile_size) {
 			var map_id;	
 			
 			
-			//if (nine <= -1) continue; 
+			if (nine <= -1) continue; 
 			
 			if (nine == G_PLATFORM_LEFT || nine == G_PLATFORM_MID || nine == G_PLATFORM_RIGHT
 					|| nine == G_PLATFORM_WALLLEFT || nine == G_PLATFORM_WALLRIGHT) 

@@ -1002,7 +1002,7 @@
             "Key": "7b66be4c-83ad-45d1-91ee-c1ed08654bc0",
             "Value": {
                 "id": "9840e295-0a96-4621-90e3-83ecb5fe3551",
-                "resourcePath": "sprites\\s_warped_player_stand_strip3\\s_warped_player_stand_strip3.yy",
+                "resourcePath": "sprites\\s_warped_player_stand_shoot\\s_warped_player_stand_shoot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1235,6 +1235,14 @@
             "Value": {
                 "id": "24be9c4d-d835-4297-85de-b2dbe3461a63",
                 "resourcePath": "sprites\\s_player_crouch_block\\s_player_crouch_block.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8f6bf0fd-aa5c-4f74-9c97-ebca968c1765",
+            "Value": {
+                "id": "800390a9-b550-4de4-8085-998b7ef1b0aa",
+                "resourcePath": "sprites\\s_warped_player_jump_shoot\\s_warped_player_jump_shoot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1803,14 +1811,6 @@
             "Value": {
                 "id": "ab61350d-191f-4478-854d-a45ba6a08d83",
                 "resourcePath": "sprites\\s_player_dust_land\\s_player_dust_land.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "cfbf1cf4-e2d5-4585-b193-088eee4c9ca8",
-            "Value": {
-                "id": "6af52d7b-5dc2-4942-9afd-4f5887b61c28",
-                "resourcePath": "sprites\\s_warped_player_stand_shoot\\s_warped_player_stand_shoot.yy",
                 "resourceType": "GMSprite"
             }
         },

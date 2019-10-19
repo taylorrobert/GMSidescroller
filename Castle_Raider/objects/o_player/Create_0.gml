@@ -9,6 +9,8 @@ jump_spd = -7;
 jump_dampener = 2.5;
 jumps_initial = 6;
 jumps = jumps_initial;
+shot_delay = room_speed/5;
+can_shoot = true;
 
 hsp_decimal = 0;
 vsp_decimal = 0;

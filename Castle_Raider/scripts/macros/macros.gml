@@ -14,6 +14,7 @@
 
 //attack
 #macro CAN_ATTACK		0
+#macro PLAYERSHOTTIMER	3
 
 //frog
 #macro INHALE			1

@@ -19,7 +19,7 @@ if (gamepad_is_connected(dev)) {
 	right				= gamepad_axis_value(dev, gp_axislh) > deadzone or right;
 	up					= gamepad_axis_value(dev, gp_axislv) < -deadzone or up;
 	down				= gamepad_axis_value(dev, gp_axislv) > deadzone or down;
-	attack				= gamepad_button_check_pressed(dev, gp_face2) or attack;
+	attack				= gamepad_button_check(dev, gp_face2) or attack;
 	jump				= gamepad_button_check_pressed(dev, gp_face1) or jump;
 	jump_held			= gamepad_button_check(dev, gp_face1) or jump_held;
 	block				= gamepad_button_check(dev, gp_shoulderr) or block;

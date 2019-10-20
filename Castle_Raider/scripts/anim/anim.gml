@@ -21,7 +21,7 @@ switch (state) {
 		}
 		
 		else if (!onGround()) {
-			sprite_index = s_warped_player_jump_shoot;			
+			sprite_index = s_warped_player_jump_shoot_wip;			
 		}
 		else {
 			if (hsp != 0) {

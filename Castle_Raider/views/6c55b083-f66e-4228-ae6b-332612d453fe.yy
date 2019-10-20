@@ -6,7 +6,8 @@
     "children": [
         "8615dc0f-7db4-48c6-81fc-af231c4ccbf9",
         "6f0eff74-5c88-466c-bef5-8f73e5e37ac6",
-        "093bb624-8037-45ed-8d57-94dd70e89313"
+        "093bb624-8037-45ed-8d57-94dd70e89313",
+        "5f2b1c22-61c7-455d-81a3-6ba1392772d7"
     ],
     "filterType": "GMSprite",
     "folderName": "WIP",

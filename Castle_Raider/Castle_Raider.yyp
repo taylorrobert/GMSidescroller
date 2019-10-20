@@ -839,6 +839,14 @@
             }
         },
         {
+            "Key": "5f2b1c22-61c7-455d-81a3-6ba1392772d7",
+            "Value": {
+                "id": "682d33ca-96c2-4667-89e2-b512b751efa8",
+                "resourcePath": "sprites\\s_warped_player_jump_shoot_wip\\s_warped_player_jump_shoot_wip.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "616ac5e9-b01d-45ec-ba6e-d9b0805c3599",
             "Value": {
                 "id": "19045ce1-c7a2-4441-b942-01d752a2c12c",

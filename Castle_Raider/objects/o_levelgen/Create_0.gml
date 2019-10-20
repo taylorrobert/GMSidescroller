@@ -4,6 +4,7 @@ tile_group_size = 48;
 side_buffer = 5;
 turn_chance = 30;
 total_area = 400;
+downCountMax = 12;
 
 for (i = 0; i < room_width div generated_tile_size; i++) {
 	for (var j = 0; j < room_height div generated_tile_size; j++) {		
@@ -18,7 +19,7 @@ var previousDir = dir;
 var downCount = 0;
 
 while (carved < total_area) {
-	if (downCount > 5) {
+	if (downCount > downCountMax) {
 		dir = choose(0, 2) * 90;
 		downCount = 0;
 	}

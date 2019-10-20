@@ -1,14 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-cameraToUse = 0;
+normalWidth = window_get_width() / 4;
+normalHeight = window_get_height() / 4;
+bigWidth = 2000;
+bigHeight = 2000;
+normal = true;
 
-var w = camera_get_view_width(view_camera[cameraToUse]);
-var h = camera_get_view_height(view_camera[cameraToUse]);
+var w = camera_get_view_width(view_camera[0]);
+var h = camera_get_view_height(view_camera[0]);
 
 //create camera
 camera = camera_create_view(0, 0, w, h, 0, -1, 1, 128, 128);
-view_set_camera(cameraToUse, camera);
+camera_set_view_size(camera, normalWidth, normalHeight);
+view_set_camera(0, camera);
 
 //camera following variables
 follow = noone;

@@ -1,7 +1,7 @@
 //init camera
-view_camera[cameraToUse] = camera;
+view_camera[0] = camera;
 view_enabled = true;
 
 
-view_visible[cameraToUse] = true;	
+view_visible[0] = true;	
 

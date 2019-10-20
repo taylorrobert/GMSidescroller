@@ -2,8 +2,8 @@
 
 //Setting pre-defined screen resolution settings
 
-    view_wport[0] = window_get_width();
-    view_hport[0] = window_get_height();
+view_hport[0] = window_get_height();
+view_wport[0] = window_get_width();
 
 
 //Checking surface against viewport

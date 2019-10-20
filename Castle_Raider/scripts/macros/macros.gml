@@ -1,5 +1,8 @@
 ///macros()
 
+#macro PLATFORM_DESKTOP		0
+#macro PLATFORM_MOBILE		1
+#macro PLATFORM_CONSOLE		2
 
 
 #macro VOID		0

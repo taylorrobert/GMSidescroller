@@ -46,6 +46,14 @@ while (carved < total_area) {
 	
 	x += lengthdir_x(generated_tile_size, dir);
 	y += lengthdir_y(generated_tile_size, dir);
+	//if (dir == 90) 
+	//	x -= generated_tile_size;
+	//else if (dir == 180) 
+	//	x += generated_tile_size;
+	//else if (dir == 0) 
+	//	y -= generated_tile_size;
+	//else if (dir == 270) 
+	//	y += generated_tile_size;
 	
 	x = clamp(x, 0 + generated_tile_size * side_buffer, room_width - generated_tile_size * side_buffer - tile_group_size);
 	y = clamp(y, 0 + generated_tile_size * side_buffer, room_height - generated_tile_size * side_buffer - tile_group_size);

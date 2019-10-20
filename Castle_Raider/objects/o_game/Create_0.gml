@@ -2,6 +2,25 @@
 // You can write your code in this editor
 macros();
 
+
+switch (os_type)
+{
+	case os_windows: 
+	case os_linux: 
+	case os_macosx:
+		global.Platform = PLATFORM_DESKTOP; break;
+	case os_android: 
+	case os_ios: 
+		global.Platform = PLATFORM_MOBILE; break;
+	case os_xboxone:
+	case os_ps4:
+	case os_ps3:
+		global.Platform = PLATFORM_CONSOLE; break;
+}
+
+
+
+
 global.grav = 0.25;
 
 

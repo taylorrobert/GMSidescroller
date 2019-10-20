@@ -30,6 +30,11 @@ if (jump) {
 //enable smaller jumps
 if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 
+//Aiming looks and feels bad if mouse is within a certain distance.
+//Check to make sure it's outside that radius.
+var mouseOutsidePlayerRadius = point_distance(o_player.x, o_player.y - 30, mouse_x, mouse_y) > 15;
+if (!mouseOutsidePlayerRadius) attack = false;
+
 if (attack and can_shoot) {
 	can_shoot = false;
 	

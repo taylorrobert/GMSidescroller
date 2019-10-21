@@ -1,6 +1,6 @@
 /// getInput();
 
-if (global.Platform == noone) {
+if (global.Platform == PLATFORM_DESKTOP) {
 	left		= keyboard_check(vk_left) or keyboard_check(ord("A"));
 	right		= keyboard_check(vk_right) or keyboard_check(ord("D"));
 	//up			= keyboard_check(vk_up) or keyboard_check(ord("W"));
@@ -21,7 +21,7 @@ if (global.Platform == noone) {
 
 //virtual_key_show(global.rightVirtualKey);
 
-//if (global.Platform == PLATFORM_MOBILE) {
+if (global.Platform == PLATFORM_MOBILE) {
 	left		= keyboard_check(vk_left);
 	right		= keyboard_check(vk_right);
 	jump		= keyboard_check_pressed(vk_space);
@@ -32,7 +32,7 @@ if (global.Platform == noone) {
 
 	
 	attack		= axisx != 0 or axisy != 0;
-//}
+}
 
 if (global.Platform == PLATFORM_CONSOLE) {
 	//controller input

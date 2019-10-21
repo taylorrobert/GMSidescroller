@@ -35,7 +35,7 @@ if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 var mx = 0;
 var my = 0;
 
-//if (global.Platform == PLATFORM_MOBILE) {
+if (global.Platform == PLATFORM_MOBILE) {
 	
 	var stickAngle = getMouseAngleToPlayer();
 		
@@ -45,11 +45,11 @@ var my = 0;
 	mx = o_gun.x + lengthdir_x(40, stickAngle);
 	my = o_gun.y + lengthdir_y(40, stickAngle);
 	
-//}
-//else {
-//	mx = mouse_x;
-//	my = mouse_y;
-//}
+}
+else {
+	mx = mouse_x;
+	my = mouse_y;
+}
 
 //Aiming looks and feels bad if mouse is within a certain distance.
 //Check to make sure it's outside that radius.

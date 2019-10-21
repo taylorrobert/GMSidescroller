@@ -8,14 +8,14 @@ display_set_gui_size(window_get_width(), window_get_height());
 
 
 
-//if (global.Platform == PLATFORM_MOBILE) {
+if (global.Platform == PLATFORM_MOBILE) {
 	obj_dpad.dpad_x = 75;
 	obj_dpad.dpad_y = gui_height - 300;
 	obj_dpad.visible = true;
 	
 	obj_analog_stick.guiX = gui_width - 200;
 	obj_analog_stick.guiY = gui_height - 200;
-//}
+}
 
 
 if (mouse_check_button_pressed(mb_left)) {

@@ -1,0 +1,43 @@
+Converting GML script: ${project_dir}\scripts\scr_get_analog_stick_axis\scr_get_analog_stick_axis.gml
+Converted description /// @description  scr_get_analog_stick_axis(obj,axis)/// @param obj
+/// @param axis
+
+Converting GML script: ${project_dir}\scripts\scr_get_tilt_speed\scr_get_tilt_speed.gml
+Converted description /// @description  scr_get_tilt_speed(xvector,speed_factor,dead_zone)/// @param xvector
+/// @param speed_factor
+/// @param dead_zone
+
+Converting GML script: ${project_dir}\objects\obj_analog_stick\Create_0.gml
+Converted builtin - line 46: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 47: view_hview -> __view_get( e__VW.HView, 0 )
+Converted description /// @description  Important stuff about making the analog stick work properly!
+
+Converting GML script: ${project_dir}\objects\obj_analog_stick\Step_0.gml
+Converted description /// @description  update analog stick
+
+Converting GML script: ${project_dir}\objects\obj_analog_stick\Draw_64.gml
+Converted description /// @description  draw the stick
+
+Converting GML script: ${project_dir}\objects\obj_analog_stick\Draw_0.gml
+Converted description /// @description  override draw_self() so that only GUI renders
+
+Converting GML script: ${project_dir}\objects\obj_dpad\Create_0.gml
+Converted builtin - line 8: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 9: view_hview -> __view_get( e__VW.HView, 0 )
+Converted description /// @description  initialize virtual keys 
+
+Converting GML script: ${project_dir}\objects\obj_dpad\Draw_64.gml
+Converted description /// @description  draw dpad
+
+Converting GML script: ${project_dir}\objects\obj_dpad\Draw_0.gml
+Converted description /// @description  override draw_self() so that only GUI renders
+
+Converting GML script: ${project_dir}\objects\obj_player\Create_0.gml
+Converted description /// @description  init
+
+Converting GML script: ${project_dir}\objects\obj_player\Step_0.gml
+Converted description /// @description  axis controls
+
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'

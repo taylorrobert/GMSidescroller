@@ -7,6 +7,12 @@ if (!layer_get_id("Player")) return;
 var gui_width = display_get_gui_width();
 var gui_height = display_get_gui_height();
 
+//if (global.Platform == PLATFORM_MOBILE) {
+	//draw_rectangle(50, gui_height - 50, 200, gui_height - 100, true);	
+	//draw_circle(gui_width - 100, gui_height - 75, 50, true)
+	draw_circle(gui_width - 250, gui_height - 500, 100, true)
+//}
+
 //if (room != rm_menu) {
 
 //	if (room != rm_game_end) {

@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "name": "iOS",
     "option_ios_apple_sign_in": false,
-    "option_ios_bundle_name": "com.company.game",
+    "option_ios_bundle_name": "com.taylorhillstudios.game",
     "option_ios_defer_home_indicator": false,
     "option_ios_devices": 2,
     "option_ios_display_name": "Made in GameMaker Studio 2",
@@ -67,8 +67,8 @@
     "option_ios_texture_page": "2048x2048",
     "option_ios_use_facebook": false,
     "option_ios_version": {
-        "build": 0,
-        "major": 1,
+        "build": 1,
+        "major": 0,
         "minor": 0,
         "revision": 0
     }

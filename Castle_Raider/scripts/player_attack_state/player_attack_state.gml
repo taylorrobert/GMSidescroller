@@ -32,6 +32,19 @@ if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 
 //Aiming looks and feels bad if mouse is within a certain distance.
 //Check to make sure it's outside that radius.
+
+var mx = 0;
+var my = 0;
+
+if (global.Platform == PLATFORM_MOBILE) {
+	
+}
+else {
+	mx = mouse_x;
+	my = mouse_y;
+}
+
+
 var mouseOutsidePlayerRadius = point_distance(o_player.x, o_player.y - 30, mouse_x, mouse_y) > 15;
 if (!mouseOutsidePlayerRadius) attack = false;
 

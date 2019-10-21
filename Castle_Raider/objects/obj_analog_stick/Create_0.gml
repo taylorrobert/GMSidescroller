@@ -36,6 +36,9 @@ enum axis {
 boundSprite = sprite_index; // should be spr_analog_boundary 
 stickSprite = spr_analog_stick; 
 
+axisx = 0;
+axisy = 0;
+
 radius = sprite_get_width(boundSprite)/2; 
 alpha = 0.75; 
 snapRate = 24; // speed at which stick snapes back to origin

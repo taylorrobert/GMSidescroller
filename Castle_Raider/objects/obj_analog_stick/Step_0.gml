@@ -37,5 +37,4 @@ else {
         stickY = guiY; 
     }       
 }
-    
 

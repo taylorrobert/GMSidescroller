@@ -1,6 +1,6 @@
 
-var angle = point_direction(x, y, mouse_x, mouse_y);
-var mouseSide = surface_get_width(application_surface)/2 < window_mouse_get_x() ? 1 : -1;
+var angle = getMouseAngleToPlayer();
+var mouseSide = getMouseDirectionToPlayer();
 image_xscale = mouseSide;
 image_angle = angle;
 

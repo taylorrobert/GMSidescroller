@@ -26,7 +26,12 @@ if (global.Platform == noone) {
 	right		= keyboard_check(vk_right);
 	jump		= keyboard_check_pressed(vk_space);
 	jump_held	= keyboard_check(vk_space);
-	//attack		= keyboard_check(vk_shift);
+	
+	var axisx = obj_analog_stick.axisx; 
+	var axisy = obj_analog_stick.axisy; 
+
+	
+	attack		= axisx != 0 or axisy != 0;
 //}
 
 if (global.Platform == PLATFORM_CONSOLE) {

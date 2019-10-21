@@ -30,23 +30,31 @@ if (jump) {
 //enable smaller jumps
 if (vsp < 0 and !jump_held) vsp = max(vsp, jump_spd/jump_dampener);
 
-//Aiming looks and feels bad if mouse is within a certain distance.
-//Check to make sure it's outside that radius.
+
 
 var mx = 0;
 var my = 0;
 
-if (global.Platform == PLATFORM_MOBILE) {
+//if (global.Platform == PLATFORM_MOBILE) {
 	
-}
-else {
-	mx = mouse_x;
-	my = mouse_y;
-}
+	var stickAngle = getMouseAngleToPlayer();
+		
+	//if (mouseDir < 0) stickAngle += 180;
+	
+	
+	mx = o_gun.x + lengthdir_x(40, stickAngle);
+	my = o_gun.y + lengthdir_y(40, stickAngle);
+	
+//}
+//else {
+//	mx = mouse_x;
+//	my = mouse_y;
+//}
 
-
-var mouseOutsidePlayerRadius = point_distance(o_player.x, o_player.y - 30, mouse_x, mouse_y) > 15;
-if (!mouseOutsidePlayerRadius) attack = false;
+//Aiming looks and feels bad if mouse is within a certain distance.
+//Check to make sure it's outside that radius.
+//var mouseOutsidePlayerRadius = point_distance(o_player.x, o_player.y - 30, mx, my) > 15;
+//if (!mouseOutsidePlayerRadius) attack = false;
 
 if (attack and can_shoot) {
 	can_shoot = false;
@@ -55,76 +63,11 @@ if (attack and can_shoot) {
 	if (facing < 0) angle += 180;
 	
 	var inst = instance_create_layer(o_gun.x + lengthdir_x(12, angle), o_gun.y + lengthdir_y(12, angle), "PlayerShots", o_basicShot);
-	var dir = point_direction(inst.x, inst.y,mouse_x,mouse_y)
+	var dir = point_direction(inst.x, inst.y,mx,my)
 	inst.hsp = lengthdir_x(inst.spd, dir);
 	inst.vsp = lengthdir_y(inst.spd, dir); 	
 	 
-	//var xpos = 0;
-	//var ypos = 0;
-	//if (up and !right and !left) {
-	//	if (sign(facing)) {
-	//		xpos = x+1;
-	//		ypos = y-42;
-	//	}
-	//	else {
-	//		xpos = x-7;
-	//		ypos = y-42;
-	//	}
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = -5;	
-	//}
-	//else if (down and !right and !left) {
-	//	if (sign(facing)) {
-	//		xpos = x;
-	//		ypos = y;
-	//	}
-	//	else {
-	//		xpos = x;
-	//		ypos = y;
-	//	}
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = 5;	
-	//}
-	//else if (up and right) {
-	//	xpos = x + 12;
-	//	ypos = y - 40;
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = -5;
-	//	inst.hsp = 5;
-	//}
-	//else if (up and left) {
-	//	xpos = x - 12;
-	//	ypos = y - 40;
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = -5;
-	//	inst.hsp = -5;
-	//}
-	//else if (down and left) {
-	//	xpos = x - 12;
-	//	ypos = y - 4;
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = 5;
-	//	inst.hsp = -5;
-	//}
-	//else if (down and right) {
-	//	xpos = x + 12;
-	//	ypos = y - 4;
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.vsp = 5;
-	//	inst.hsp = 5;
-	//}
-	//else { //just left and just right
-	//	if (sign(facing)) {
-	//		xpos = x + 12;
-	//		ypos = y - 28;
-	//	}
-	//	else {
-	//		xpos = x - 18;
-	//		ypos = y - 28;
-	//	}
-	//	var inst = instance_create_layer(xpos, ypos, "PlayerShots", o_basicShot);
-	//	inst.hsp = 5 * facing;		
-	//}
+
 	alarm[PLAYERSHOTTIMER] = shot_delay;	
 }
 
